@@ -22,8 +22,8 @@ When writing formulas via Python/openpyxl, write `=iGet(...)` NOT `=@iGet(...)`.
 - Including `@` in the stored formula causes it to be treated as a text string instead of executing
 - This applies to all functions: `iGet`, `iGetArray`, `iGetPerf`, `iGetCash`, `iPut`, `iPutCash`
 
-**Correct:** `cell.value = '=SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
-**Wrong:** `cell.value = '=@SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
+**Correct:** `cell.value = '=iGet("Bay View Hotel","Actual","Total Revenue","Latest Approved")`
+**Wrong:** `cell.value = '=@iGet("Bay View Hotel","Actual","Total Revenue","Latest Approved")`
 
 ## 4. NO EMOJIS
 Maintain professional tone in all outputs
