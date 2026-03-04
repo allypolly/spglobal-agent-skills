@@ -6,7 +6,7 @@ description: Use this skill any time a financial analysis spreadsheet is needed 
 # CRITICAL RULES
 
 ## 1. NO HALLUCINATION OF DATA ITEMS
-**ONLY use data items documented in this skill file or in `docs/SPG_OfficeReferenceGuide_v2_RANGEV.xlsx`**
+**ONLY use data items documented in this skill file**
 - NEVER guess or invent data item names
 - If uncertain, check the metric reference tables below or the Excel reference guide
 - Calculate missing ratios manually from documented items
@@ -15,13 +15,12 @@ description: Use this skill any time a financial analysis spreadsheet is needed 
 Every Excel model MUST have ZERO formula errors (#REF!, #DIV/0!, #VALUE!, #N/A, #NAME?, #INVALID COMPANY ID)
 - Use `IFERROR()` to handle missing data gracefully
 - Use absolute references ($) for company identifier cells
-- Always use exchange-qualified identifiers (e.g., `"NASDAQ:NVDA"`, `"NYSE:MCD"`) for reliability -- bare tickers can cause `#INVALID COMPANY ID` errors
 
 ## 3. NEVER USE `@` IN FORMULAS
-When writing formulas via Python/openpyxl, write `=SPG(...)` NOT `=@SPG(...)`.
+When writing formulas via Python/openpyxl, write `=iGet(...)` NOT `=@iGet(...)`.
 - The `@` implicit intersection operator is added automatically by Excel at display time
 - Including `@` in the stored formula causes it to be treated as a text string instead of executing
-- This applies to all functions: `SPG`, `SPGRangeV`, `SPGScreen`, `SPGTable`
+- This applies to all functions: `iGet`, `iGetArray`, `iGetPerf", "iGetCash", "iPut", "iPutCash"
 
 **Correct:** `cell.value = '=SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
 **Wrong:** `cell.value = '=@SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
