@@ -20,7 +20,7 @@ Every Excel model MUST have ZERO formula errors (#REF!, #DIV/0!, #VALUE!, #N/A, 
 When writing formulas via Python/openpyxl, write `=iGet(...)` NOT `=@iGet(...)`.
 - The `@` implicit intersection operator is added automatically by Excel at display time
 - Including `@` in the stored formula causes it to be treated as a text string instead of executing
-- This applies to all functions: `iGet`, `iGetArray`, `iGetPerf", "iGetCash", "iPut", "iPutCash"
+- This applies to all functions: `iGet`, `iGetArray`, `iGetPerf', 'iGetCash', 'iPut', 'iPutCash'
 
 **Correct:** `cell.value = '=SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
 **Wrong:** `cell.value = '=@SPG("NASDAQ:NVDA","IQ_TOTAL_REV","FY2024")'`
