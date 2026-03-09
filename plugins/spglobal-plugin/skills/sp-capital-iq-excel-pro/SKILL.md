@@ -45,6 +45,15 @@ This Excel file contains:
 
 ---
 
+# Entity Structure
+
+Every iLEVEL User sets up an Entity Structure that typically consists of 4 Levels. 
+
+From Lowest to Highest: `Portfolio`, `Investing Entity`, `Fund`, `Asset`
+`Segment` can be defined under `Asset` to signify level under `Asset`
+
+---
+
 # CORE CONCEPTS
 
 ## Identifier (Company Lookup)
@@ -58,7 +67,13 @@ The first parameter in every iLEVEL formula identifies which company or entity t
 
 ## Scenario (Company Lookup)
 
-Performance case (Actual, Budget, Forecast)	
+Performance case scenario of which data is derived from.
+| Format | Description |
+|---|---|
+
+|`Actual`|Historical data that is already confirmed|
+|`Budget`|Budget data that is planned but not confirmed yet|
+|`Forecast`|Forecast data that is forecast in the future|
 
 ## Metric (Data Item)
 
@@ -66,17 +81,46 @@ The second parameter is the mnemonic code for the specific data point to retriev
 
 ## Period End
 
-End date of the period for which data is being loaded or requested
+End date of the period for which data is being loaded or requested.
+| Format | Example | Description |
+|---|---|---|
+
+|`Current`|`Current`|Current Period End|
+|`Latest Approved`|`Latest Approved`|Latest Approved Period End|
+|`Month.Year`|`MAR.2026`|Month and Year|
+|`FQ.Year`|`FQ1.2026`|Fiscal Quarter and Year|
 
 ## Period Length
 
-Length of time for which data is being loaded or requested
+Length of time for which data is being loaded or requested.
+
+| Format | Example | Description |
+|---|---|---|
+
+|`RP`|`RP`| Reporting Period designated for the Entity|
+|`Month`|`1M`| Reporting Period of Latest Month|
+|`Quarter`|`1Q`| Reporting Period of Latest Quarter|
+|`Year`|`1Y`| Reporting Period of Latest Year|
+|`L3M`|`L3M`| Reporting Period of Latest 3 Months|
+|`LTM`|`LTM`| Reporting Period of Latest 12 Months|
+|`CQTD`|`CQTD`| Reporting Period of Calendar Quarter to Date|
+|`FQTD`|`FQTD`| Reporting Period of Fiscal Quarter to Date|
+|`CYTD`|`CYTD`| Reporting Period of Calendar Year to Date|
+|`FYTD`|`FYTD`| Reporting Period of Fiscal Year to Date|
 
 ## Scale
 
-Multiplication factor for a value being loaded (e.g. thousands, millions, billions)
+Multiplication factor for a value being loaded.
 
-## Fund
+| Format | Description |
+|---|---|
+
+|`Not Scaled`| Metric is Not Scaled|
+|`Thousands`| Metric is Scaled to Thousands|
+|`Millions`| Metric is Scaled to Millions|
+|`Billions`| Metric is Scaled to Billions|
+
+## Fund Name
 
 When loading or retrieving data that relates to the Asset-Fund, use this parameter to enter the Fund Name (e.g. Ownership % between fund and asset)
 
@@ -86,11 +130,20 @@ Security, as defined in iLEVEL under Entities, or Segment, as defined under Data
 
 ## Currency
 	
-Currency in which data will be stored or retrieved (monetary data items only)
+Currency in which data will be stored or retrieved (monetary data items only). See the full Currency reference tables below.
 
 ## As Of Date
 
 Collection period during which data was loaded (using “Current” in an iGet formula retrieves the most recently loaded value). The As Of Date is used to submit and retrieve reforecasts, allowing the user to see how a value has changed over time.
+
+| Format | Example | Description |
+|---|---|---|
+
+|`Current`|`Current`|Current Period End|
+|`Latest Approved`|`Latest Approved`|Latest Approved Period End|
+|`Month.Year`|`MAR.2026`|Month and Year|
+|`FQ.Year`|`FQ1.2026`|Fiscal Quarter and Year|
+|`FY.Year`|`FY.2026`|Fiscal Year|
 
 ## Cell Referencing
 
@@ -137,9 +190,10 @@ Retrieves one specific data point for one specific time period.
 =iGet("Alpha Investors II, L.P.", "Strategy")                     -- Strategy, no period needed
 ```
 
-**With Options:**
+**Retrieve `=iGet()` between Fund and Asset:**
+**Syntax:** `=iGet("Fund Identifier", "Scenario", "Metric", "Period End", "Period Length", "As of Date", "Asset Identifier", "Segment", "Offset", "Currency", "Fx Type", "Scale")`
 ```excel
-=SPG("NYSE:IBM", "IQ_TOTAL_REV", "FY2018", "Options: Curr=EUR, Mag=Millions")
+=iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current","Always_Safe_Insurance_-_Demo","Security 1","1M","RC","Spot","Not Scaled")
 ```
 
 **Consensus Estimates:**
