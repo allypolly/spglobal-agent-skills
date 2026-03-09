@@ -118,15 +118,15 @@ Scales monetary values to reduce trailing zeros.
 
 ## Fund Name
 
-When loading or retrieving data that relates to the Asset-Fund, use this parameter to enter the Fund Name (e.g. Ownership % between fund and asset)
+When loading or retrieving data that relates to the Asset-Fund, use this parameter to enter the Fund Name (e.g. Ownership % between fund and asset).
 
 ## Segment
 
-Security, as defined in iLEVEL under Entities, or Segment, as defined under Data Items, for which data is stored or retrieved
+Security, as defined in iLEVEL under Entities, or Segment, as defined under Data Items, for which data is stored or retrieved.
 
 ## Currency
 	
-Currency in which data will be stored or retrieved (monetary data items only). See the full Currency reference tables below.
+Currency in which data will be stored or retrieved (monetary data items only). See the full Currency Reference Table below and use the respective Currency Metric.
 
 ## As Of Date
 
@@ -216,520 +216,493 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 ```excel
 =iGetPerf(iPathExpressions(iPathConfiguration("MustContainOwner",),"{""Data"":[[""Alpha Investors II, L.P.""]]}","{""Data"":[[""10 Pine Street""]]}"),,,"NAV",,,"Today","0D","RC",,"Actual","Today")
 ```
----
 
 # METRIC REFERENCE
 
-## Market Data
+## Currency Reference Table
 
-| Metric | Mnemonic |
-|---|---|
-| Day Close Price | `SP_PRICE_CLOSE` |
-| Intraday Price | `SP_PRICE_INTRADAY` |
-| Volume Weighted Average Price | `SP_VWAP` |
-| Market Capitalization | `SP_MARKETCAP` |
-| Total Enterprise Value (SNL) | `SNL_TEV` |
-| Total Enterprise Value (CIQ) | `IQ_TEV` |
-| Shares Outstanding | `SP_SHARES_OUT` |
-| Volume | `SP_VOLUME` |
-| Dividend Yield (%) | `SP_DIV_YIELD` |
-| LTM Dividends Announced | `SP_DIV_LTM` |
+| Currency Metric | Description      |
+| ------ | ------------------------- |
+| ARS    | Argentine peso            |
+| AUD    | Australian dollar         |
+| BEF    | Belgian Franc             |
+| BGN    | Bulgarian lev             |
+| BRL    | Brazilian real            |
+| CAD    | Canadian dollar           |
+| CHF    | Swiss franc               |
+| CLP    | Chilean peso              |
+| CNY    | Chinese yuan              |
+| COP    | Colombian peso            |
+| CZK    | Czech koruna              |
+| DEM    | Deutsche Mark             |
+| DKK    | Danish krone              |
+| EEK    | Estonian kroon            |
+| EGP    | Egyptian pound            |
+| ESP    | Spanish Peseta            |
+| EUR    | Euro                      |
+| FJD    | Fiji dollar               |
+| FRF    | French Franc              |
+| GBP    | Pound sterling            |
+| HKD    | Hong Kong dollar          |
+| HRK    | Croatian kuna             |
+| HUF    | Hungarian forint          |
+| IDR    | Indonesian rupiah         |
+| ILS    | Israeli new sheqel        |
+| INR    | Indian rupee              |
+| ISK    | Icelandic króna           |
+| ITL    | Italian Lira              |
+| JMD    | Jamaican dollar           |
+| JPY    | Japanese yen              |
+| KRW    | South Korean won          |
+| KZT    | Kazakhstani tenge         |
+| LTL    | Lithuanian litas          |
+| LVL    | Latvian lats              |
+| MXN    | Mexican peso              |
+| MYR    | Malaysian ringgit         |
+| NGN    | Nigerian naira            |
+| NLG    | Dutch Guilder             |
+| NOK    | Norwegian krone           |
+| NZD    | New Zealand dollar        |
+| PEN    | Peruvian nuevo sol        |
+| PHP    | Philippine peso           |
+| PKR    | Pakistani rupee           |
+| PLN    | Polish zloty              |
+| RON    | Romanian new leu          |
+| RUB    | Russian rouble            |
+| SAR    | Saudi riyal               |
+| SEK    | Swedish krona/kronor      |
+| SGD    | Singapore dollar          |
+| THB    | Thai baht                 |
+| TRY    | Turkish lira              |
+| TWD    | New Taiwan dollar         |
+| UAH    | Ukrainian hryvnia         |
+| USD    | United States dollar      |
+| VEF    | Venezuelan bolívar fuerte |
+| VND    | Vietnamese Dong           |
+| ZAR    | South African rand        |
 
-**Sample:**
-```excel
-=SPG("AMZN", "SP_MARKETCAP")                -- Latest Market Capitalization
-=SPG("AMZN", "SP_MARKETCAP", "04/15/2020")  -- Market Cap as of 4/15/2020
-```
+## Cash Flow Items
 
-> Exclude the as-of date parameter for latest available.
+| Metric                                                  | Mnemonic                                                |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| Management Fee (outside commitment) - CF                | Management Fee (outside commitment) - CF                |
+| Partnership Expenses (outside commitment) - CF          | Partnership Expenses (outside commitment) - CF          |
+| Income - CF                                             | Income - CF                                             |
+| Unfunded Adjustment - CF                                | Unfunded Adjustment - CF                                |
+| Partnership Expenses - CF                               | Partnership Expenses - CF                               |
+| Temporary Return of Capital - Investment - CF           | Temporary Return of Capital - Investment - CF           |
+| Return of Capital - Management Fees - CF                | Return of Capital - Management Fees - CF                |
+| Org. Cost (Inside Commitment) - CF                      | Org. Cost (Inside Commitment) - CF                      |
+| Investments - CF                                        | Investments - CF                                        |
+| Management Fee (inside commitment) - CF                 | Management Fee (inside commitment) - CF                 |
+| Withholding Tax - CF                                    | Withholding Tax - CF                                    |
+| Return of Capital - Stock - CF                          | Return of Capital - Stock - CF                          |
+| Carry - CF                                              | Carry - CF                                              |
+| Interest Income - CF                                    | Interest Income - CF                                    |
+| Realized Gain/Loss - Cash - CF                          | Realized Gain/Loss - Cash - CF                          |
+| Return of Excess Capital - Called - CF                  | Return of Excess Capital - Called - CF                  |
+| Dividend Income - CF                                    | Dividend Income - CF                                    |
+| Return of Capital - Cash - CF                           | Return of Capital - Cash - CF                           |
+| Commitment Amount                                       | Commitment Amount                                       |
+| Cost Basis Adjustment - CF                              | Cost Basis Adjustment - CF                              |
+| Recallable Income - CF                                  | Recallable Income - CF                                  |
+| Subsequent Close Interest (Distribution) - CF           | Subsequent Close Interest (Distribution) - CF           |
+| Recallable Realized Gain/Loss - CF                      | Recallable Realized Gain/Loss - CF                      |
+| Investments (Outside commitment) - CF                   | Investments (Outside commitment) - CF                   |
+| Realized Gain/Loss - Stock - CF                         | Realized Gain/Loss - Stock - CF                         |
+| Recallable Dividend Income - CF                         | Recallable Dividend Income - CF                         |
+| Recallable Interest Income - CF                         | Recallable Interest Income - CF                         |
+| Return of Capital - Partnership Expenses - CF           | Return of Capital - Partnership Expenses - CF           |
+| Subsequent Close Interest (Call) - CF                   | Subsequent Close Interest (Call) - CF                   |
+| Temporary Return of Capital - Management Fees - CF      | Temporary Return of Capital - Management Fees - CF      |
+| Temporary Return of Capital - Partnership Expenses - CF | Temporary Return of Capital - Partnership Expenses - CF |
 
----
+## Calculated Items
 
-## Corporate
+| Metric                          | Mnemonic                        |
+| ------------------------------- | ------------------------------- |
+| TVM                             | TVM                             |
+| Unrealized Investment Multiple  | Unrealized Investment Multiple  |
+| Realized Investment Multiple    | Realized Investment Multiple    |
+| Net IRR                         | Net IRR                         |
+| Contributions                   | Contributions                   |
+| Distributions                   | Distributions                   |
+| DPI - CF                        | DPI - CF                        |
+| Net Cash Flow - CF              | Net Cash Flow - CF              |
+| TVPI - CF                       | TVPI - CF                       |
+| RVPI - CF                       | RVPI - CF                       |
+| MOIC - CF                       | MOIC - CF                       |
+| Gross IRR                       | Gross IRR                       |
+| TWR - Modified Dietz            | TWR - Modified Dietz            |
+| TWR - Simple Dietz              | TWR - Simple Dietz              |
+| Funded Commitment               | Funded Commitment               |
+| Unfunded Commitment             | Unfunded Commitment             |
+| Covid Adj                       | Covid Adj                       |
 
-| Metric | Mnemonic |
-|---|---|
-| Entity Name | `SP_COMPANY_NAME` |
-| Ticker | `SP_TICKER` |
-| Exchange | `SP_EXCHANGE` |
-| Primary Industry (MI) | `MI_PRIMARY_INDUSTRY` |
-| Primary Industry (CIQ/GICS) | `IQ_PRIMARY_INDUSTRY` |
-| SIC Code | `SP_SIC_CODE` |
-| State | `SP_STATE` |
-| Country / Region Name | `SP_COUNTRY_NAME` |
-| S&P Capital IQ ID | `SP_CIQ_ID` |
-| Company Type | `SP_COMPANY_TYPE` |
-| Company Status | `SP_COMPANY_STATUS` |
-| Business Description | `SP_BUSINESS_DESCRIPTION` |
-| Ownership Structure | `SP_OWN_STRUCTURE` |
-| Month of Fiscal Year End | `SP_MONTH_FYE` |
-| Web Address | `SP_WEBSITE` |
+## Calendar Items
 
----
+| Metric                       | Mnemonic                     |
+| ---------------------------- | ---------------------------- |
+| Acquisition AsOf             | Acquisition AsOf             |
+| Exit AsOf                    | Exit AsOf                    |
+| Fiscal Year                  | Fiscal Year                  |
+| Fiscal Year End Date         | Fiscal Year End Date         |
+| Calendar Year                | Calendar Year                |
+| Calendar Year End            | Calendar Year End            |
+| Fiscal Quarter End           | Fiscal Quarter End           |
+| Fiscal Month                 | Fiscal Month                 |
+| Fiscal Quarter               | Fiscal Quarter               |
+| Calendar Quarter             | Calendar Quarter             |
+| Current Period Date          | Current Calendar Period Date |
+| Current Calendar Period      | Current Calendar Period      |
+| Current Fiscal Period        | Current Fiscal Period        |
+| Latest Period Date           | Latest Calendar Period Date  |
+| Latest Calendar Period       | Latest Calendar Period       |
+| Latest Fiscal Period         | Latest Fiscal Period         |
+| Fiscal Period                | Fiscal Period                |
+| Calendar Quarter End         | Calendar Quarter End         |
+| iLEVEL Client Current Date   | iLEVEL Client Current Date   |
+| Fund Latest Transaction Date | Fund Latest Transaction Date |
 
-## Valuation / Multiples
+## Company Attributes (Default)
+| Metric                       | Mnemonic                     |
+| ---------------------------- | ---------------------------- |
+| Asset Status                 | Asset Status                 |
+| Business Description (Short) | Business Description (Short) |
+| Website                      | Website                      |
+| Parent Company               | Parent Company               |
+| Headquarters                 | Headquarters                 |
+| Lead Fund                    | Lead Fund                    |
+| Is Child Asset?              | Is Child Asset?              |
+| Lead Investment Professional | Lead Investment Professional |
+| Public/Private               | Public/Private               |
+| Total Committed Capital      | Total Committed Capital      |
+| Reporting Currency           | Reporting Currency           |
+| Investment Amount            | Investment Amount            |
+| Ownership %                  | Ownership %                  |
+| Ownership                    | Ownership                    |
 
-### Trailing Multiples
+## Corporate Action
+| Metric                   | Mnemonic                 |
+| ------------------------ | ------------------------ |
+| Acquired Company Name    | Acquired Company Name    |
+| Acquiring Company Name   | Acquiring Company Name   |
+| Corporate Action         | Corporate Action         |
+| Corporate Action Article | Corporate Action Article |
+| Corporate Action Notes   | Corporate Action Notes   |
+| Prior Asset Name         | Prior Asset Name         |
 
-| Metric | Mnemonic |
-|---|---|
-| TEV/Total Revenue | `IQ_TEV_TOTAL_REV` |
-| TEV/EBITDA | `IQ_TEV_EBITDA` |
-| TEV/EBIT | `IQ_TEV_EBIT` |
-| TEV/Unlevered FCF | `IQ_TEV_UFCF` |
-| Price/EPS | `IQ_PE` |
-| Price/Book Value | `IQ_PBV_X` |
-| Price/Tangible Book Value | `IQ_PTBV_X` |
+## Credit Template
+| Metric                                                                                       | Mnemonic                                                                                     |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| % FD equity in warrants? - CR                                                                | % FD equity in warrants? - CR                                                                |
+| ACQ LTM Adjusted EBITDA - CR                                                                 | ACQ LTM Adjusted EBITDA - CR                                                                 |
+| ACQ LTM GAAP EBITDA - CR                                                                     | ACQ LTM GAAP EBITDA - CR                                                                     |
+| All In Rate at Floor (bps) - CR                                                              | All In Rate at Floor (bps) - CR                                                              |
+| Call Protection - CR                                                                         | Call Protection - CR                                                                         |
+| Closing LTV (%) - CR                                                                         | Closing LTV (%) - CR                                                                         |
+| Coupon Rate (bps) (excluding floor) - CR                                                     | Coupon Rate (bps) (excluding floor) - CR                                                     |
+| Credit Rating: Moody's / S&P / Fitch - CR                                                    | Credit Rating: Moody's / S&P / Fitch - CR                                                    |
+| Currency Hedging - CR                                                                        | Currency Hedging - CR                                                                        |
+| Current LTM Adjusted EBITDA - CR                                                             | Current LTM Adjusted EBITDA - CR                                                             |
+| Current LTM GAAP EBITDA - CR                                                                 | Current LTM GAAP EBITDA - CR                                                                 |
+| Excess cash flow sweep - CR                                                                  | Excess cash flow sweep - CR                                                                  |
+| Exit Method - CR                                                                             | Exit Method - CR                                                                             |
+| Fixed or Floating - CR                                                                       | Fixed or Floating - CR                                                                       |
+| Floor (bps) - CR                                                                             | Floor (bps) - CR                                                                             |
+| General Partner Name - CR                                                                    | General Partner Name - CR                                                                    |
+| Current Gross Senior Leverage - CR                                                           | Current Gross Senior Leverage - CR                                                           |
+| Gross TVPI - CR                                                                              | Gross TVPI - CR                                                                              |
+| If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR | If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR |
+| If floating, define reference rate - CR                                                      | If floating, define reference rate - CR                                                      |
+| In compliance w/ all covenants? (Y/N) - CR                                                   | In compliance w/ all covenants? (Y/N) - CR                                                   |
+| Investment Team - CR                                                                         | Investment Team - CR                                                                         |
+| Lien - CR                                                                                    | Lien - CR                                                                                    |
+| Current LTV (%) - CR                                                                         | Current LTV (%) - CR                                                                         |
+| Current Net Leverage - CR                                                                    | Current Net Leverage - CR                                                                    |
+| Number of financial covenants - CR                                                           | Number of financial covenants - CR                                                           |
+| Participation Type - CR                                                                      | Participation Type - CR                                                                      |
+| PE Sponsor - CR                                                                              | PE Sponsor - CR                                                                              |
+| PIK Coupon (bps) (excluding floor) - CR                                                      | PIK Coupon (bps) (excluding floor) - CR                                                      |
+| Senior Gross Leverage - CR                                                                   | Senior Gross Leverage - CR                                                                   |
+| Total Equity Co-Investment Commitment Amount - CR                                            | Total Equity Co-Investment Commitment Amount - CR                                            |
+| Current Total Gross Leverage - CR                                                            | Current Total Gross Leverage - CR                                                            |
+| Total Gross MoM - CR                                                                         | Total Gross MoM - CR                                                                         |
+| Total Loan Term (months) - CR                                                                | Total Loan Term (months) - CR                                                                |
+| Tranche - CR                                                                                 | Tranche - CR                                                                                 |
+| Undrawn fee (bps) - CR                                                                       | Undrawn fee (bps) - CR                                                                       |
+| Upfront fee / OID (bps) - CR                                                                 | Upfront fee / OID (bps) - CR                                                                 |
+| Exit Gross Senior Leverage - CR                                                              | Exit Gross Senior Leverage - CR                                                              |
+| Exit LTM Adjusted EBITDA - CR                                                                | Exit LTM Adjusted EBITDA - CR                                                                |
+| Exit LTM GAAP EBITDA - CR                                                                    | Exit LTM GAAP EBITDA - CR                                                                    |
+| Exit LTV (%) - CR                                                                            | Exit LTV (%) - CR                                                                            |
+| Exit Net Leverage - CR                                                                       | Exit Net Leverage - CR                                                                       |
+| Exit Total Gross Leverage - CR                                                               | Exit Total Gross Leverage - CR                                                               |
+| Net Leverage - CR                                                                            | Net Leverage - CR                                                                            |
+| Total Gross Leverage - CR                                                                    | Total Gross Leverage - CR                                                                    |
+| Fiscal Year - CR                                                                             | Fiscal Year - CR                                                                             |
+| Total Gross IRR                                                                              | Total Gross IRR                                                                              |
 
-**Sample:**
-```excel
-=SPG("AMZN", "IQ_PE", "LTM")                      -- Latest trailing PE
-=SPG("AMZN", "SP_PE_FWD", "LTM", "4/15/2020")     -- Trailing PE as of 4/15/2020
-```
+## Databridge Tracking
+| Metric                                | Mnemonic                              |
+| ------------------------------------- | ------------------------------------- |
+| Databridge Reach Out Date             | Databridge Reach Out Date             |
+| Databridge Status                     | Databridge Status                     |
+| Databridge Entry Date                 | Databridge Entry Date                 |
+| Databridge Date Received              | Databridge Date Received              |
+| Template Type                         | Template Type                         |
+| Databridge Email Address - GP Tracker | Databridge Email Address - GP Tracker |
+| Databridge Tracking - Notes           | Databridge Tracking - Notes           |
 
-### Forward Trading Multiples
+## Debt & Securities (Default)
+| Metric              | Mnemonic            |
+| ------------------- | ------------------- |
+| Security Name       | Security Name       |
+| Security Type       | Security Type       |
+| Is Ownership        | Is Ownership        |
+| Security Status     | Security Status     |
+| Security Sub-Type   | Security Sub-Type   |
+| Security Short Name | Security Short Name |
 
-| Metric | Mnemonic |
-|---|---|
-| TEV/Forward Total Revenue | `SP_TEV_TOTAL_REV_FWD` |
-| TEV/Forward EBITDA | `SP_TEV_EBITDA_FWD` |
-| TEV/Forward EBIT | `SP_TEV_EBIT_FWD` |
-| Price/Forward EPS | `SP_PE_FWD` |
+## Directs / Co-Invest
+| Metric                           | Mnemonic                         |
+| -------------------------------- | -------------------------------- |
+| Asset Type                       | Asset Type                       |
+| EBITDA                           | EBITDA                           |
+| Investment Date                  | Investment Date                  |
+| Board Seat                       | Board Seat                       |
+| Management Rights                | Management Rights                |
+| Valuation Rationale              | Valuation Rationale              |
+| City                             | City                             |
+| Net Debt                         | Net Debt                         |
+| Total Equity Value               | Total Equity Value               |
+| TEV Multiple                     | TEV Multiple                     |
+| Total Enterprise Value           | Total Enterprise Value           |
+| Total Revenue vs Previous Period | Total Revenue vs Previous Period |
+| EBITDA vs Previous Period        | EBITDA vs Previous Period        |
+| EBITDA Margin                    | EBITDA Margin                    |
+| Cash and Equivalents             | Cash and Equivalents             |
+| Total Debt                       | Total Debt                       |
+| Leverage Ratio                   | Leverage Ratio                   |
+| Cost                             | Cost                             |
+| Total Leverage Multiple          | Total Leverage Multiple          |
+| Reported Valuation Multiple      | Reported Valuation Multiple      |
+| Exit Multiple                    | Exit Multiple                    |
+| Occupancy %                      | Occupancy %                      |
+| Variable Operating Expense       | Variable Operating Expense       |
+| Fixed Operating Expense          | Fixed Operating Expense          |
+| Total Operating Expense          | Total Operating Expense          |
+| Net Operating Income             | Net Operating Income             |
+| Market Cap Rate                  | Market Cap Rate                  |
+| Loan to Value                    | Loan to Value                    |
+| Debt Service Coverage Ratio      | DSCR                             |
+| Leverage Cash Flow               | Leverage Cash Flow               |
+| KPI 1 Name                       | KPI 1 Name                       |
+| KPI 2 Name                       | KPI 2 Name                       |
+| KPI 3 Name                       | KPI 3 Name                       |
+| KPI 1 Value                      | KPI 1 Value                      |
+| KPI 2 Value                      | KPI 2 Value                      |
+| KPI 3 Value                      | KPI 3 Value                      |
+| Metropolitan Statistical Area    | Metropolitan Statistical Area    |
+| Property Life Cycle              | Property Life Cycle              |
+| Property Type                    | Property Type                    |
+| Anti-bribery Program             | Anti-bribery Program             |
+| Code of Conduct                  | Code of Conduct                  |
+| Community                        | Community                        |
+| Customer Survey Mechanism        | Customer Survey Mechanism        |
+| Ethics and Compliance Policy     | Ethics and Compliance Policy     |
+| Health & Safety                  | Health & Safety                  |
+| Labor Rights                     | Labor Rights                     |
+| Country (Directs)                | Country (Directs)                |
+| State (Directs)                  | State (Directs)                  |
 
-**Sample:**
-```excel
-=SPG("AMZN", "SP_PE_FWD", "NTM")                  -- Latest forward PE
-=SPG("AMZN", "SP_PE_FWD", "NTM", "4/15/2020")     -- Forward PE as of 4/15/2020
-```
+## Fund Attributes (Default)
+| Metric                        | Mnemonic                      |
+| ----------------------------- | ----------------------------- |
+| Fund Name (Short)             | Fund Name (Short)             |
+| Fund Status                   | Fund Status                   |
+| Capital Called To Date        | Capital Called To Date        |
+| Initial Close Date            | Initial Close Date            |
+| Final Close Date              | Final Close Date              |
+| Fund Industry                 | Fund Industry                 |
+| Fund Type                     | Fund Type                     |
+| Type of Plan                  | Type of Plan                  |
+| Entity Type                   | Entity Type                   |
+| Default PME Index             | Default PME Index             |
+| Default PME Liquidity Premium | Default PME Liquidity Premium |
+| Entity ID                     | Entity ID                     |
 
-> Supported periods for forward multiples: `NTM`, `FY+1`, `FQ+1`, `FY2021`, etc.
+## Fund Setup
+| Metric                  | Mnemonic                |
+| ----------------------- | ----------------------- |
+| Fund Reporting Currency | Fund Reporting Currency |
+| Fund Name (Long)        | Fund Name (Long)        |
+| Fund Description        | Fund Description        |
+| Fund Vintage            | Fund Vintage            |
+| Fund General Partner    | Fund General Partner    |
+| Fund Size               | Fund Size               |
+| Fund Geography          | Fund Geography          |
+| Strategy                | Strategy                |
+| SubStrategy             | SubStrategy             |
+| Investment Status       | Investment Status       |
+| IsExternal              | IsExternal              |
+| IsExclude               | IsExclude               |
+| Commitment - Local      | Commitment              |
+| Acquisition Year        | Acquisition Year        |
+| General Partner         | General Partner         |
+| Fund Data Type          | Fund Data Type          |
 
----
+## GICS
+| Metric                      | Mnemonic                    |
+| --------------------------- | --------------------------- |
+| Industry Group              | Industry Group              |
+| Business Description (Long) | Business Description (Long) |
+| Geography                   | Geography                   |
+| Ticker Symbol               | Ticker Symbol               |
+| Sector                      | Sector                      |
+| Country                     | Country                     |
+| State                       | State                       |
+| Postal Code                 | Postal Code                 |
+| Sub-Industry                | Sub-Industry                |
+| Stock Exchange              | Stock Exchange              |
+| Status                      | Status                      |
+| Industry                    | Industry                    |
 
-## Capital IQ Consensus Estimates
+## Holdings
+| Metric                                  | Mnemonic                                |
+| --------------------------------------- | --------------------------------------- |
+| Holdings Entry Status                   | Holdings Entry Status                   |
+| Fund Holdings Notes                     | Fund Holdings Notes                     |
+| Annual Fund Holdings Notes              | Annual Fund Holdings Notes              |
+| Duped Holdings Quarter End Date         | Duped Holdings Quarter End Date         |
+| Holdings Entry QC Date - Portal         | Holdings Entry QC Date - Portal         |
+| Holdings Entry Submission Date - Portal | Holdings Entry Submission Date - Portal |
+| Holdings Received Date - Portal         | Holdings Received Date - Portal         |
+| Holdings Reporting Frequency            | Holdings Reporting Frequency            |
+| Holdings Entry ID                       | Holdings Entry ID                       |
 
-| Metric | Mnemonic |
-|---|---|
-| CIQ Avg Broker Recommendation (Text) | `SP_AVG_BROKER_REC_TEXT` |
-| CIQ Avg Broker Recommendation (#) | `SP_AVG_BROKER_REC` |
-| CIQ Mean Price Target | `SP_PRICE_TARGET` |
-| Mean EPS Estimate | `SP_EPS_EST` |
-| Mean Revenue Estimate | `SP_REV_EST` |
-| Mean EBITDA Estimate | `SP_EBITDA_EST` |
-| Mean EBIT Estimate | `SP_EBIT_EST` |
-| Mean Net Income Estimate | `SP_NI_EST` |
-| Mean Cash Flow per Share Estimate | `SP_CFPS_EST` |
+## Market Values
+| Metric                                          | Mnemonic                                        |
+| ----------------------------------------------- | ----------------------------------------------- |
+| NAV                                             | NAV                                             |
+| Reported Market Value - Date                    | Reported Market Value - Date                    |
+| Adjusted Market Value                           | Adjusted Market Value                           |
+| Reported Market Value - CF                      | Reported Market Value - CF                      |
+| Latest Reported Market Value - CF Date (System) | Latest Reported Market Value - CF Date (System) |
+| Market Capitalization                           | Market Capitalization                           |
+| TEV/Total Revenue                               | TEV/Total Revenue                               |
+| TEV/EBITDA                                      | TEV/EBITDA                                      |
+| Total Revenues, 1 Year Growth                   | Total Revenues, 1 Year Growth                   |
+| EBITDA, 1 Year Growth                           | EBITDA, 1 Year Growth                           |
 
-**Non-Periodic:**
-```excel
-=SPG("AMZN", "SP_PRICE_TARGET")                  -- Latest Price Target
-=SPG("AMZN", "SP_PRICE_TARGET", "04/15/2020")    -- Price Target as of 4/15/2020
-```
+## PC Entry
+| Metric                            | Mnemonic                          |
+| --------------------------------- | --------------------------------- |
+| PC Entry ID                       | PC Entry ID                       |
+| PC Entry QC Date – Portal         | PC Entry QC Date – Portal         |
+| PC Entry Status                   | PC Entry Status                   |
+| PC Entry Submission Date - Portal | PC Entry Submission Date - Portal |
+| PC Received Date - Portal         | PC Received Date - Portal         |
+| PC Reporting Frequency            | PC Reporting Frequency            |
 
-**Periodic:**
-```excel
-=SPG("AMZN", "SP_EPS_EST", "FY+1")               -- EPS Estimate for next fiscal year
-=SPG("AMZN", "SP_EPS_EST", "FY+1", "04/15/2020") -- Estimate as of 4/15/2020
-```
+## SOI Entry
+| Metric                        | Mnemonic                      |
+| ----------------------------- | ----------------------------- |
+| Company Name                  | Company Name                  |
+| Acquisition Date              | Acquisition Date              |
+| Exit Date                     | Exit Date                     |
+| Remaining Market Value        | Remaining Market Value        |
+| Total Proceeds                | Total Proceeds                |
+| Total Value                   | Total Value                   |
+| Total Cost Basis              | Total Cost Basis              |
+| Remaining Cost Basis          | Remaining Cost Basis          |
+| Total Cost Change             | Total Cost Change             |
+| Remaining Market Value Change | Remaining Market Value Change |
+| TVM Change                    | TVM Change                    |
+| Total Proceeds Change         | Total Proceeds Change         |
+| Company Status                | Company Status                |
 
-> Supported periods for estimates: `NTM`, `FY+1`, `FQ+1`, `FY2021`, etc.
+## Client Tracking
+| Metric      | Mnemonic    |
+| ----------- | ----------- |
+| Investor ID | Investor ID |
 
----
+## Company Attributes
+| Metric                           | Mnemonic                         |
+| -------------------------------- | -------------------------------- |
+| T&C_Price Per Share              | T&C_Price Per Share              |
+| T&C_Conversion Ratio             | T&C_Conversion Ratio             |
+| T&C_Shares Held                  | T&C_Shares Held                  |
+| T&C_Amount Invested              | T&C_Amount Invested              |
+| T&C_Conversion Ratio Numerator   | T&C_Conversion Ratio Numerator   |
+| T&C_Conversion Ratio Denominator | T&C_Conversion Ratio Denominator |
+| Investment Thesis                | Investment Thesis                |
 
-## Capital IQ Fundamentals
+## Fund Attributes (Additional)
+| Metric                    | Mnemonic                  |
+| ------------------------- | ------------------------- |
+| Is Internal Investor?     | Is Internal Investor?     |
+| Benchmark-Id              | Benchmark-Id              |
+| Benchmark-Vintage         | Benchmark-Vintage         |
+| Expiration Date (Assumed) | Expiration Date (Assumed) |
 
-### Balance Sheet
+## Balance Sheet
+| Metric                          | Mnemonic                        |
+| ------------------------------- | ------------------------------- |
+| Short-Term Investments          | Short-Term Investments          |
+| Cash and Short-Term Investments | Cash and Short-Term Investments |
+| Accounts Receivable             | Accounts Receivable             |
+| Inventory                       | Inventory                       |
+| Other Current Assets            | Other Current Assets            |
+| Total Current Assets            | Total Current Assets            |
+| Property Plant & Equipment      | Property Plant & Equipment      |
+| Goodwill                        | Goodwill                        |
+| Total Long-Term Assets          | Total Long-Term Assets          |
+| Total Assets                    | Total Assets                    |
+| Accounts Payable                | Accounts Payable                |
+| Other Current Liabilities       | Other Current Liabilities       |
+| Total Current Liabilities       | Total Current Liabilities       |
+| Long Term Debt                  | Long Term Debt                  |
+| Minority Interest               | Minority Interest               |
+| Total Long-Term Liabilities     | Total Long-Term Liabilities     |
+| Total Liabilities               | Total Liabilities               |
+| Shareholder Equity              | Shareholder Equity              |
+| Total Liabilities & Equity      | Total Liabilities & Equity      |
 
-| Metric | Mnemonic |
-|---|---|
-| Cash and Equivalents | `IQ_CASH_EQUIV` |
-| Short Term Investments | `IQ_ST_INVEST` |
-| Cash & Short Term Investments | `IQ_CASH_ST_INVEST` |
-| Accounts Receivable | `IQ_AR` |
-| Total Receivables | `IQ_TOTAL_RECEIV` |
-| Inventory | `IQ_INVENTORY` |
-| Total Current Assets | `IQ_TOTAL_CA` |
-| Gross Property, Plant & Equipment | `IQ_GPPE` |
-| Net Property, Plant & Equipment | `IQ_NPPE` |
-| Long-term Investments | `IQ_LT_INVEST` |
-| Total Goodwill and Intangibles | `IQ_TOTAL_GW_INTAN` |
-| Total Assets | `IQ_TOTAL_ASSETS` |
-| Accounts Payable | `IQ_AP` |
-| Short-term Borrowings | `IQ_ST_DEBT` |
-| Curr. Port. of LT Debt | `IQ_CURRENT_PORT_DEBT` |
-| Current Portion of Leases | `IQ_CURRENT_PORT_LEASES` |
-| Total Current Liabilities | `IQ_TOTAL_CL` |
-| Long-Term Debt | `IQ_LT_DEBT` |
-| Long-Term Leases | `IQ_CAPITAL_LEASES` |
-| Total Liabilities | `IQ_TOTAL_LIAB` |
-| Total Minority Interest | `IQ_MINORITY_INTEREST` |
-| Total Preferred Equity | `IQ_TOTAL_PREF_EQUITY` |
-| Common Stock | `IQ_COMMON_STOCK` |
-| Retained Earnings | `IQ_RETAINED_EARNINGS` |
-| Treasury Stock | `IQ_TREASURY` |
-| Total Common Equity | `IQ_TOTAL_COMMON_EQUITY` |
-| Total Equity | `IQ_TOTAL_EQUITY` |
-| Total Liabilities And Equity | `IQ_TOTAL_LIAB_EQUITY` |
-| Total Debt | `IQ_TOTAL_DEBT` |
-| Net Debt | `IQ_NET_DEBT` |
-| Total Capital | `IQ_TOTAL_CAP` |
-
-#### Balance Sheet -- Supplemental
-
-| Metric | Mnemonic |
-|---|---|
-| Filing Date | `IQ_FINL_FILING_DATE` |
-| Period Date | `IQ_PERIOD_END` |
-| Total Shares Out. on Filing Date | `IQ_SHARES_OUT_FILING_DATE` |
-| Total Shares Out. on BS Date | `IQ_SHARES_OUT_PERIOD_END` |
-| Book Value/Share | `IQ_BVPS` |
-| Tangible Book Value | `IQ_TANG_EQUITY` |
-| Tangible Book Value/Share | `IQ_TBVPS` |
-| Net Goodwill | `IQ_GW_NET` |
-| Net Intangibles | `IQ_INTAN_NET` |
-| Total Leases | `IQ_TOTAL_LEASES` |
-| Total Current Assets, As Reported | `IQ_TOTAL_CA_REPORTED` |
-| Total Current Liabilities, As Reported | `IQ_TOTAL_CL_REPORTED` |
-| Total Shareholders Equity, As Reported | `IQ_TOTAL_EQUITY_REPORTED` |
-| Part-Time Employees | `IQ_PART_TIME` |
-| Full Time Employees | `IQ_FULL_TIME` |
-
-### Income Statement
-
-| Metric | Mnemonic |
-|---|---|
-| Total Revenue | `IQ_TOTAL_REV` |
-| Cost of Goods Sold / Cost of Revenue | `IQ_COGS` **(ALWAYS use this -- never use `IQ_COST_REV`)** |
-| Gross Profit | `IQ_GP` |
-| Selling General & Admin Exp. | `IQ_SGA_SUPPL` |
-| R & D Exp. | `IQ_RD_EXP` |
-| Depreciation & Amort. | `IQ_DA_SUPPL` |
-| Amort. of Goodwill and Intangibles | `IQ_GW_INTAN_AMORT` |
-| Operating Income | `IQ_OPER_INC` |
-| Net Interest Exp. | `IQ_NET_INTEREST_EXP` |
-| EBT Excl Unusual Items | `IQ_EBT_EXCL` |
-| Other Unusual Items | `IQ_OTHER_UNUSUAL_SUPPL` |
-| EBT Incl. Unusual Items | `IQ_EBT` |
-| Income Tax Expense | `IQ_INC_TAX` |
-| Earnings from Cont. Ops. | `IQ_EARNINGS_CONT_OPS` |
-| Earnings of Discontinued Ops. | `IQ_EARNINGS_DISCONTINUED_OPS` |
-| Extraord. Item & Account. Change | `IQ_EXTRA_ACC_ITEMS` |
-| Net Income to Company | `IQ_NET_INC` |
-| Pref. Dividends and Other Adj. | `IQ_PREF_DIV_OTHER` |
-| Merger & Related Restruct. Charges | `IQ_MERGER_RESTRUCTURE` |
-| NI to Common Incl Extra Items | `IQ_NI_AVAIL_INCL` |
-| NI to Common Excl. Extra Items | `IQ_NI_AVAIL_EXCL` |
-| Basic EPS | `IQ_BASIC_EPS_AFTER_EXTRA` |
-| Basic EPS Excl. Extra Items | `IQ_BASIC_EPS_BEFORE_EXTRA` |
-| Weighted Avg. Basic Shares Out. | `IQ_AVG_BASIC_SHARES_OUT` |
-| Diluted EPS Incl. Extra Items | `IQ_DILUT_EPS_AFTER_EXTRA` |
-| Diluted EPS Excl. Extra Items | `IQ_DILUT_EPS_BEFORE_EXTRA` |
-| Weighted Avg. Diluted Shares Out. | `IQ_AVG_DILUT_SHARES_OUT` |
-| Normalized Basic EPS | `IQ_BASIC_EPS_NORM` |
-| Normalized Diluted EPS | `IQ_DILUT_EPS_NORM` |
-
-#### Income Statement -- Supplemental
-
-| Metric | Mnemonic |
-|---|---|
-| EBITDA | `IQ_EBITDA` |
-| EBITDA Incl Eqty Inc from Affil Excl | `IQ_EBITDA_EQ_INC_EXCL_OPER_LEASE_ADJ` |
-| EBITDA, As Reported | `IQ_EBITDA_REPORTED` |
-| EBITA | `IQ_EBITA` |
-| EBIT | `IQ_EBIT` |
-| EBITDAR | `IQ_EBITDAR` |
-| As Reported Total Revenue | `IQ_TOTAL_REV_AS_REPORTED` |
-| Total Interest Income, As Reported | `IQ_INT_INC_TOTAL_REPORTED` |
-| Total Interest Expense, As Reported | `IQ_INT_EXPEN_TOTAL_REPORTED` |
-| Net Interest Income, As Reported | `IQ_NET_INT_INC_REPORTED` |
-| Net Rental Expense, Total | `IQ_NET_RENTAL_EXP_FN` |
-| Normalized Net Income | `IQ_NI_NORM` |
-| Total Same Store Sales Growth | `IQ_SAME_STORE_TOTAL` |
-| Earnings before Taxes, As Reported | `IQ_EBT_REPORTED` |
-| Effective Tax Rate | `IQ_EFFECT_TAX_RATE` |
-| Payout Ratio | `IQ_PAYOUT_RATIO` |
-| Interest on Long-Term Debt | `IQ_INT_EXP_LTD` |
-| Total Current Taxes | `IQ_CURR_TAXES` |
-| Total Deferred Taxes | `IQ_DEFERRED_TAXES_TOTAL` |
-
-### Cash Flow
-
-| Metric | Mnemonic |
-|---|---|
-| Net Income - CF | `IQ_NI_CF` |
-| Depreciation & Amort., Total | `IQ_DA_CF` |
-| Asset Writedown & Restructuring Costs | `IQ_ASSET_WRITEDOWN_CF` |
-| Stock-Based Compensation | `IQ_STOCK_BASED_CF` |
-| Net Cash From Discontinued Ops. | `IQ_DO_CF` |
-| Change in Acc. Receivable | `IQ_CHANGE_AR` |
-| Change In Inventories | `IQ_CHANGE_INVENTORY` |
-| Change in Acc. Payable | `IQ_CHANGE_AP` |
-| Change in Unearned Rev. | `IQ_CHANGE_UNEARN_REV` |
-| Change In Income Taxes | `IQ_CHANGE_INC_TAX` |
-| Change in Def. Taxes | `IQ_CHANGE_DEF_TAX` |
-| Cash from Ops. | `IQ_CASH_OPER` |
-| Capital Expenditure | `IQ_CAPEX` |
-| Sale of Property, Plant and Equipment | `IQ_SALE_PPE_CF` |
-| Cash Acquisitions | `IQ_CASH_ACQUIRE_CF` |
-| Divestitures | `IQ_DIVEST_CF` |
-| Sale (Purchase) of Intangible assets | `IQ_SALE_INTAN_CF` |
-| Invest. in Marketable & Equity Securt. | `IQ_INVEST_SECURITY_CF` |
-| Cash from Investing | `IQ_CASH_INVEST` |
-| Short Term Debt Issued | `IQ_ST_DEBT_ISSUED` |
-| Long-Term Debt Issued | `IQ_LT_DEBT_ISSUED` |
-| Total Debt Issued | `IQ_TOTAL_DEBT_ISSUED` |
-| Short Term Debt Repaid | `IQ_ST_DEBT_REPAID` |
-| Long-Term Debt Repaid | `IQ_LT_DEBT_REPAID` |
-| Total Debt Repaid | `IQ_TOTAL_DEBT_REPAID` |
-| Issuance of Common Stock | `IQ_COMMON_ISSUED` |
-| Repurchase of Common Stock | `IQ_COMMON_REP` |
-| Issuance of Pref. Stock | `IQ_PREF_ISSUED` |
-| Repurchase of Preferred Stock | `IQ_PREF_REP` |
-| Common Dividends Paid | `IQ_COMMON_DIV_CF` |
-| Pref. Dividends Paid | `IQ_PREF_DIV_CF` |
-| Common and/or Pref. Dividends Paid | `IQ_COMMON_PREF_DIV_CF` |
-| Total Dividends Paid | `IQ_TOTAL_DIV_PAID_CF` |
-| Cash from Financing | `IQ_CASH_FINAN` |
-| Net Change in Cash | `IQ_CASH_NET_CHANGE` |
-
-#### Cash Flow -- Supplemental
-
-| Metric | Mnemonic |
-|---|---|
-| Cash Interest Paid | `IQ_CASH_INTEREST` |
-| Cash Taxes Paid | `IQ_CASH_TAXES` |
-| Net Debt Issued | `IQ_NET_DEBT_ISSUED` |
-| Levered Free Cash Flow | `IQ_LEVERED_FCF` |
-| Unlevered Free Cash Flow | `IQ_UNLEVERED_FCF` |
-| Change in Net Working Capital | `IQ_CHANGE_NET_WORKING_CAPITAL` |
-
-### As-of Dates for CIQ Fundamentals
-
-Capital IQ Fundamentals support an "as-of" parameter for pulling historical financial data as of a specific date. This applies to both Actual and Relative period types:
-
-```excel
-=SPG("AMZN", "IQ_TOTAL_ASSETS", "FY2018", "6/30/2019")  -- Actual period with as-of date
-=SPG("AMZN", "IQ_TOTAL_ASSETS", "FY0", "6/30/2019")     -- Relative period with as-of date
-```
-
----
-
-## SNL Financials
-
-### Key Financials
-
-| Metric | Mnemonic |
-|---|---|
-| Market Capitalization | `SP_MARKETCAP` |
-| Total Enterprise Value (SNL) | `SNL_TEV` |
-| Total Revenue | `SNL_TOTAL_REVENUE` |
-| Interest Expense | `SNL_INT_EXP` |
-| Net Income | `SNL_NET_INC` |
-| Net Income Attributable to Parent | `SNL_NET_INC_PARENT` |
-| Avg Diluted Shares | `SNL_AVG_DIL_SHARES` |
-| Basic EPS after Extra | `SNL_BASIC_EPS_AFTER_EXTRA` |
-| Diluted EPS after Extraordinary | `SNL_DILUT_EPS_AFTER_EXTRA` |
-| EBITDA | `SNL_EBITDA` |
-| EBIT | `SNL_EBIT` |
-| Common Dividends Declared per Share | `SNL_COMMON_DIV_DECLARED` |
-| Dividend Payout Ratio | `SNL_PAYOUT_RATIO` |
-| Recurring Revenue Growth | `SNL_REC_REV_GROWTH` |
-| EPS Growth, before Extraordinary | `SNL_EPS_GROWTH_BEFORE_EXTRA` |
-| EPS Growth, after Extraordinary | `SNL_EPS_AFTER_EXTRA_GROWTH` |
-| ROAA | `SNL_ROA` |
-| ROAE | `SNL_ROE` |
-| ROACE | `SNL_ROCE` |
-| ROATCE | `SNL_ROATCE` |
-| Gross Margin | `SNL_GROSS_MARGIN` |
-| EBITDA Margin | `SNL_EBITDA_MARGIN` |
-| EBIT Margin | `SNL_EBIT_MARGIN` |
-| Net Income Margin | `SNL_NET_INC_MARGIN` |
-| Recurring EBITDA Margin | `SNL_REC_EBITDA_MARGIN` |
-| EBITDA/ Interest Expense | `SNL_EBITDA_TO_INT_EXP` |
-| Cash and Cash Equivalents | `SNL_CASH_EQUIV` |
-| Current Assets | `SNL_CURRENT_ASSETS` |
-| Net PP&E | `SNL_NPPE` |
-| Total Assets | `SNL_TOTAL_ASSETS` |
-| Total Debt | `SNL_TOTAL_DEBT` |
-| Total Equity | `SNL_TOTAL_EQUITY` |
-| Total Capitalization | `SNL_TOTAL_CAP` |
-| Common Shares Outstanding | `SNL_SHARES_OUT_PERIOD_END` |
-| Book Value per Share | `SNL_BVPS` |
-| Tangible Book Value per Share | `SNL_TBVPS` |
-| Total Equity/ Total Assets | `SNL_EQUITY_TO_ASSETS` |
-| Total Debt/ Total Equity | `SNL_DEBT_TO_EQUITY` |
-| Total Debt/ Total Capitalization | `SNL_TOTAL_DEBT_TO_TOTAL_CAP` |
-| Debt/ EBITDA | `SNL_DEBT_TO_EBITDA` |
-| Cash Flow from Operating Activities | `SNL_CASH_OPER` |
-| Cash Flow: Capital Expenditures | `SNL_CAPEX` |
-
-#### SNL Key Financials -- Supplemental
-
-| Metric | Mnemonic |
-|---|---|
-| Period Ended (mm/dd/yyyy) | `SNL_PERIOD_END` |
-| Earnings Release Date (mm/dd/yyyy) | `SNL_EARNINGS_RELEASE_DATE` |
-| Financials Reported Currency Code | `SNL_CURRENCY_FINANCIALS` |
-| Fiscal Period | `SNL_FISCAL_PERIOD` |
-
-### Banking
-
-| Metric | Mnemonic |
-|---|---|
-| Net Customer Loans | `SNL_NET_CUSTOMER_LOANS` |
-| Total Deposits | `SNL_TOTAL_DEPOSITS` |
-| Tangible Equity | `SNL_TANG_EQUITY` |
-| Net Income | `SNL_NET_INC` |
-| ROACE | `SNL_ROCE` |
-| ROATCE | `SNL_ROATCE` |
-| Net Loans/ Assets | `SNL_NET_LOAN_TO_ASSETS` |
-| Amortized Loans/ Deposits | `SNL_AMORT_LOANS_TO_DEPOSITS` |
-| Securities/ Assets | `SNL_SECS_TO_ASSETS` |
-| Loans/ Deposits | `SNL_LOAN_TO_DEP` |
-| Net Interest Income/ Avg Assets | `SNL_NET_INT_INC_TO_AVG_ASSETS` |
-| Net Interest Margin | `SNL_NIM` |
-| Tier 1 Common Capital (CET1) Ratio | `SNL_TIER_1_COMMON_RATIO` |
-| Tier 1 Ratio | `SNL_TIER_1_RATIO` |
-| Total Capital Ratio | `SNL_TOTAL_CAPITAL_RATIO` |
-
-### Insurance
-
-| Metric | Mnemonic |
-|---|---|
-| Investments | `SNL_INVESTMENTS` |
-| Total Policy Reserves | `SNL_FIN_TOTAL_POLICY_RESV` |
-| Total Policy Income | `SNL_TOTAL_POLICY_INC` |
-| Net Investment Income | `SNL_NET_INVEST_INC` |
-| Total Policy Expense | `SNL_TOTAL_POLICY_EXP` |
-| Underwriting & Other Expense | `SNL_UNDERWRITING_OTHER_EXPENSE` |
-| Gross Premiums Written | `SNL_GPW` |
-| Gross Premiums Earned | `SNL_GROSS_PREMS_EARNED` |
-| Ceded Premiums Earned | `SNL_CEDED_PREMS_EARNED` |
-| Net Premiums Earned | `SNL_NPE` |
-| Loss Ratio | `SNL_LR` |
-| Expense Ratio | `SNL_ER` |
-| Combined Ratio | `SNL_CR` |
-| Policy Expense/ Expense | `SNL_POLICY_EXP_TO_EXP` |
-| Insurance Investment Yield | `SNL_INSURANCE_INVEST_YLD` |
-
-### Energy (Coal, Gas Utilities, Midstream, Power)
-
-| Metric | Mnemonic |
-|---|---|
-| Coal Sales Revenue | `SNL_COAL_SALES_REV` |
-| Electric Revenue | `SNL_ELEC_REV` |
-| Oil & Natural Gas Revenue | `SNL_OIL_NAT_GAS_REV` |
-| Gas Distribution Revenue | `SNL_GAS_DIST_REV` |
-| Oil & Gas Exploration & Production | `SNL_OIL_GAS_EXPLORATION_PRODUCTION` |
-| Oil & Gas Products Sales | `SNL_OIL_GAS_PRODUCTS_SALES` |
-| Oil & Gas Midstream Operating Rev. | `SNL_OIL_GAS_MIDSTREAM_OPER_REV` |
-| Energy Operating Revenue | `SNL_ENERGY_OPER_REV` |
-| Electric Revenue/ Operating Revenue | `SNL_ELEC_REV_TO_OPER_REV` |
-| Gas Revenue/ Operating Revenue | `SNL_GAS_REV_TO_OPER_REV` |
-| Op. & Maint./ Operating Expense | `SNL_OPS_AND_MAINT_TO_OPER_EXP` |
-| Electric Generation/ Operating Expense | `SNL_ELEC_GEN_TO_OPER_EXP` |
-| Gas Cost/ Operating Expense | `SNL_GAS_COST_TO_OPER_EXP` |
-| Midstream Revenue/ Operating Revenue | `SNL_MIDSTREAM_REV_TO_OPER_REV` |
-| Midstream Costs/ Operating Expense | `SNL_MIDSTREAM_COSTS_TO_OPER_REV` |
-
-### Media & Communications
-
-| Metric | Mnemonic |
-|---|---|
-| Radio Content and Broadcasting Revenue | `SNL_RADIO_CONTENT_BROADCASTING_REV` |
-| TV/ Cable Network Revenue | `SNL_TV_TO_CABLE_NETWORK_REV` |
-| Filmed Entertainment & TV Revenue | `SNL_FILMED_ENTERTAINMENT_TV_REV` |
-| Internet Content and Distribution Revenue | `SNL_INTERNET_CONTENT_DIST_REV` |
-| Content, Broadcasting and Distribution Revenue | `SNL_CONTENT_BROADCASTING_DIST_REV` |
-| Magazine Revenue | `SNL_MAGAZINE_REV` |
-| Newspaper Revenue | `SNL_NEWSPAPER_REV` |
-| Book Publishing Revenue | `SNL_BOOK_PUBLISHING_REV` |
-| Publishing Revenue | `SNL_PUBLISHING_REV` |
-| Owned & Operated Radio Stations | `SNL_OWNED_OPERATED_RADIO_STATIONS` |
-| Number of Radio Stations | `SNL_NUM_RADIO_STATIONS` |
-| Net Radio Revenue | `SNL_NET_RADIO_REV` |
-| Basic Subscribers | `SNL_BASIC_SUBSCRIBERS` |
-| Digital Subscribers | `SNL_DIGITAL_SUBSCRIBERS` |
-| High Speed Data Subscribers | `SNL_HIGH_SPEED_DATA_SUBSCRIBERS` |
-
-### Financial Services
-
-| Metric | Mnemonic |
-|---|---|
-| Assets Under Management | `SNL_AUM` |
-| Mutual Funds under Management | `SNL_MUTUAL_FUNDS_UNDER_MGMT` |
-| AUM Growth | `SNL_AUM_GROWTH` |
-| Management Fees/ Avg AUM | `SNL_MGMT_FEES_TO_AVG_AUM` |
-| Loans Originated | `SNL_LOAN_ORIGINATED` |
-| Loans Sold | `SNL_LOAN_SOLD` |
-| Total Net Loans | `SNL_NET_LOANS` |
-| Investments | `SNL_INV_CO_INVEST` |
-| Managed Assets | `SNL_MNGD_ASSETS` |
-| Managed Receiv. for Self and Others | `SNL_MNGD_RECV_FOR_SELF_OTHERS` |
-| Managed NCOs/ Avg Managed Rec | `SNL_MNGD_NCO_TO_AVG_MNGD_REC` |
-| Investments/ Assets | `SNL_INVEST_TO_ASSETS` |
-| Return on Avg. AUM | `SNL_RETURN_ON_AVG_AUM` |
-| Return on Avg. Managed Receivables | `SNL_RETURN_ON_AVG_MNGD_REC` |
-| Return on Avg. Managed Assets | `SNL_RETURN_ON_AVG_MNGD_ASSETS` |
-
-### Real Estate
-
-| Metric | Mnemonic |
-|---|---|
-| Gross Depreciable Property | `SNL_GROSS_DEPRECIABLE_PPTY` |
-| Net Property Investment | `SNL_NET_PPTY_INVEST` |
-| Finance Leases | `SNL_FIN_LEASES` |
-| Mortgage Loans | `SNL_MRTG_LOAN` |
-| Rental Revenue | `SNL_RENTAL_REV` |
-| Rental Net Operating Income | `SNL_RENTAL_NET_OPER_INC` |
-| NOI | `SNL_NOI` |
-| FFO | `SNL_FFO_GAAP` |
-| Adjusted FFO | `SNL_AFFO` |
-| Gain on Sale of Real Estate | `SNL_GAIN_ON_SALE_OF_RE` |
-| FFO Payout (%) | `SNL_FFO_PAYOUT` |
-| FFO/ Total Revenue (%) | `SNL_FFO_TO_TOTAL_REV` |
-| Same-store NOI: Change | `SNL_SS_NOI_CHANGE` |
-| Same-store Revenue: Chg. from Prior | `SNL_SS_REV_CHANGE_FROM_PRIOR` |
-| NAV per Share, as Reported | `SNL_NAV_PER_SHARE` |
-
----
-
-## Other
-
-| Metric | Mnemonic |
-|---|---|
-| Topic Tags | `SP_TOPICTAG` |
-| Headcount | `SP_HEADCOUNT_LATEST` |
-
----
-
-# KNOWN NON-EXISTENT ITEMS
-
-**These items do NOT exist. NEVER use them:**
-
-| What You Might Guess | Correct Alternative |
-|---|---|
-| `SP_52WK_HI` / `SP_52WK_LO` | Not documented -- use `SPGRANGEV` with `SP_PRICE_CLOSE` to derive |
-| `SP_NUM_EST_BROKER_REC` | Not documented -- use `SP_AVG_BROKER_REC` or `SP_AVG_BROKER_REC_TEXT` |
-| `SP_AVG_VOLUME` / `SP_VOLUME_30D` | Use `SP_VOLUME` with date range via `SPGRANGEV` |
-| `IQ_COMPANY_TICKER` | Use `SP_TICKER` |
-| `IQ_ASSET_TURNOVER` | Calculate: `IQ_TOTAL_REV / IQ_TOTAL_ASSETS` |
-| `IQ_INVENTORY_TURNOVER` | Calculate: `IQ_COGS / IQ_INVENTORY` |
-| `IQ_CURRENT_RATIO` | Calculate: `IQ_TOTAL_CA / IQ_TOTAL_CL` |
-| `IQ_QUICK_RATIO` | Calculate: `(IQ_TOTAL_CA - IQ_INVENTORY) / IQ_TOTAL_CL` |
-| `IQ_ROIC` / `IQ_WACC` | Calculate manually from documented items |
-| `IQ_GROSS_MARGIN` | Use `SNL_GROSS_MARGIN` or calculate: `IQ_GP / IQ_TOTAL_REV` |
-| `IQ_EBITDA_MARGIN` | Use `SNL_EBITDA_MARGIN` or calculate: `IQ_EBITDA / IQ_TOTAL_REV` |
-| `IQ_FCF_MARGIN` | Calculate: `IQ_LEVERED_FCF / IQ_TOTAL_REV` |
-| `IQ_NET_DEBT_TO_EBITDA` | Use `SNL_DEBT_TO_EBITDA` or calculate: `IQ_NET_DEBT / IQ_EBITDA` |
-| `IQ_ENTERPRISE_VALUE` | Use `IQ_TEV` or `SNL_TEV` |
-| `IQ_FREE_CASH_FLOW` | Use `IQ_LEVERED_FCF` or `IQ_UNLEVERED_FCF` |
-| `IQ_OPERATING_MARGIN` | Use `SNL_EBIT_MARGIN` or calculate: `IQ_OPER_INC / IQ_TOTAL_REV` |
-| `IQ_NET_MARGIN` | Use `SNL_NET_INC_MARGIN` or calculate: `IQ_NET_INC / IQ_TOTAL_REV` |
-| `IQ_DEBT_TO_EQUITY` | Use `SNL_DEBT_TO_EQUITY` or calculate: `IQ_TOTAL_DEBT / IQ_TOTAL_EQUITY` |
-| `IQ_EV_TO_SALES` | Use `IQ_TEV_TOTAL_REV` |
-| `IQ_EV_TO_EBITDA` | Use `IQ_TEV_EBITDA` |
-| `IQ_COST_REV` | Use `IQ_COGS` |
+## Income Statement
+| Metric                                  | Mnemonic                                |
+| --------------------------------------- | --------------------------------------- |
+| Total Revenue                           | Total Revenue                           |
+| Non-Operating Income                    | Non-Operating Income                    |
+| Expenses                                | Expenses                                |
+| Cost of Goods Sold                      | Cost of Goods Sold                      |
+| SG&A                                    | SG&A                                    |
+| Depreciation & Amortization             | Depreciation & Amortization             |
+| Other Operating Expense/(Income), Total | Other Operating Expense/(Income), Total |
+| Total Interest Expense                  | Total Interest Expense                  |
+| Tax Expense                             | Tax Expense                             |
+| Key Performance Indicators              | Key Performance Indicators              |
+| Widgets Produced                        | Widgets Produced                        |
+| Widgets Rejected                        | Widgets Rejected                        |
+| Rejection Rate                          | Rejection Rate                          |
+| Operating Rate                          | Operating Rate                          |
+| Takt Time (Minutes)                     | Takt Time (Minutes)                     |
+| Recent Developments                     | Recent Developments                     |
+| Financial Highlights                    | Financial Highlights                    |
+| Net Income                              | Net Income                              |
+| Sales                                   | Sales                                   |
+| Cost of Sales                           | Cost of Sales                           |
+| Other Income                            | Other Income                            |
+| Gross Profit                            | Gross Profit                            |
+| Administration Expense                  | Administration Expense                  |
+| Employee Benefits Expense               | Employee Benefits Expense               |
+| Depreciation & Amortisation Expense     | Depreciation & Amortisation Expense     |
+| Rent                                    | Rent                                    |
+| Other Expenses                          | Other Expenses                          |
+| Finance Costs                           | Finance Costs                           |
+| Total Expenses                          | Total Expenses                          |
+| EBIT                                    | EBIT                                    |
+| EPAT                                    | EPAT                                    |
 
 **When in doubt:** Check the metric reference tables above or the Excel reference guide. If not found, it does NOT exist.
 
