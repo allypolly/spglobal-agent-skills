@@ -70,7 +70,6 @@ The first parameter in every iLEVEL formula identifies which company or entity t
 Performance case scenario of which data is derived from.
 | Format | Description |
 |---|---|
-
 |`Actual`|Historical data that is already confirmed|
 |`Budget`|Budget data that is planned but not confirmed yet|
 |`Forecast`|Forecast data that is forecast in the future|
@@ -84,7 +83,6 @@ The second parameter is the mnemonic code for the specific data point to retriev
 End date of the period for which data is being loaded or requested.
 | Format | Example | Description |
 |---|---|---|
-
 |`Current`|`Current`|Current Period End|
 |`Latest Approved`|`Latest Approved`|Latest Approved Period End|
 |`Month.Year`|`MAR.2026`|Month and Year|
@@ -96,7 +94,6 @@ Length of time for which data is being loaded or requested.
 
 | Format | Example | Description |
 |---|---|---|
-
 |`RP`|`RP`| Reporting Period designated for the Entity|
 |`Month`|`1M`| Reporting Period of Latest Month|
 |`Quarter`|`1Q`| Reporting Period of Latest Quarter|
@@ -114,7 +111,6 @@ Multiplication factor for a value being loaded.
 
 | Format | Description |
 |---|---|
-
 |`Not Scaled`| Metric is Not Scaled|
 |`Thousands`| Metric is Scaled to Thousands|
 |`Millions`| Metric is Scaled to Millions|
@@ -138,7 +134,6 @@ Collection period during which data was loaded (using “Current” in an iGet f
 
 | Format | Example | Description |
 |---|---|---|
-
 |`Current`|`Current`|Current Period End|
 |`Latest Approved`|`Latest Approved`|Latest Approved Period End|
 |`Month.Year`|`MAR.2026`|Month and Year|
