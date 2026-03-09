@@ -56,7 +56,7 @@ From Lowest to Highest: `Portfolio`, `Investing Entity`, `Fund`, `Asset`
 
 # CORE CONCEPTS
 
-## Identifier (Company Lookup)
+## Identifier (Fund or Asset Name)
 
 The first parameter in every iLEVEL formula identifies which company or entity to look up.
 
@@ -107,14 +107,14 @@ Length of time for which data is being loaded or requested.
 
 ## Scale
 
-Multiplication factor for a value being loaded.
+Scales monetary values to reduce trailing zeros.
 
-| Format | Description |
+| Value | Alias |
 |---|---|
-|`Not Scaled`| Metric is Not Scaled|
-|`Thousands`| Metric is Scaled to Thousands|
-|`Millions`| Metric is Scaled to Millions|
-|`Billions`| Metric is Scaled to Billions|
+| `Not Scaled` | `0` |
+| `Thousands` | `3` |
+| `Millions` | `6` |
+| `Billions` | `9` |
 
 ## Fund Name
 
@@ -139,6 +139,18 @@ Collection period during which data was loaded (using “Current” in an iGet f
 |`Month.Year`|`MAR.2026`|Month and Year|
 |`FQ.Year`|`FQ1.2026`|Fiscal Quarter and Year|
 |`FY.Year`|`FY.2026`|Fiscal Year|
+
+## Offset
+| Format | Example | Description |
+|---|---|---|
+|`#M`|`1M`|1 Month Offset|
+|`#Q`|`1Q`|1 Quarter Offset|
+|`#Y`|`1Y`|1 Year Offset|
+
+**Building a model with historical columns:**
+```
+Historical Total Revenue (FY-4):  =iGet($C$2, "Total Revenue", "4Y")
+```
 
 ## Cell Referencing
 
@@ -167,8 +179,6 @@ All formulas reference $C$2:
 - Always use absolute references (`$C$2`) so formulas don't break when rows/columns shift
 - Wrap non-critical data items in `IFERROR()` to degrade gracefully
 
----
-
 # iGet FUNCTIONS
 
 ## `=iGet()` -- Single Value
@@ -186,165 +196,26 @@ Retrieves one specific data point for one specific time period.
 ```
 
 **Retrieve `=iGet()` between Fund and Asset:**
-**Syntax:** `=iGet("Fund Identifier", "Scenario", "Metric", "Period End", "Period Length", "As of Date", "Asset Identifier", "Segment", "Offset", "Currency", "Fx Type", "Scale")`
+**Syntax:** `=iGet("Fund Name", "Scenario", "Metric", "Period End", "Period Length", "As of Date", "Asset Name", "Segment", "Offset", "Currency", "Fx Type", "Scale")`
 ```excel
 =iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current","Always_Safe_Insurance_-_Demo","Security 1","1M","RC","Spot","Not Scaled")
 ```
 
-**Consensus Estimates:**
-```excel
-=SPG("NYSE:MCD", "Total Revenue", "FY2025", "Options:DataType=SD")
-```
+**TO DEVELOP**
 
-**TEV Note:** TEV data items (`IQ_TEV`, `SNL_TEV`, `IQ_TEV_EBITDA`, `IQ_TEV_TOTAL_REV`, etc.) do NOT require period parameters -- they return the current total enterprise values.
+## `=iGetArray()` -- Pulls all Fund/Asset Relationships
 
-## `=SPGRangeV()` -- Range of Values (Time Series)
+Pulls all of the Fund/Asset Relationships into the Excel File. Note, Sheet1!U8:V1291 of the syntax below can change according to the number of Fund/Asset Relationships.
 
-Pulls a time series of data (e.g., the last 5 years of revenue). The formula spills across multiple cells.
+**Syntax:** =@iGetArray(Sheet1!U8:V1291,"Screening","{""Items"":[""All Assets""]}","{""FundTypes"":[""Legal Entity"",""Fund"",""Directs"",""Fund of Fund""],""Items"":[""Portfolio""]}","Direct",,,"{""Show"":""Fund,Investment""}")
 
-**Syntax:** `=SPGRangeV("Identifier", "Metric", "Beginning Period", "As-Of Date", "Options:")`
+## `=iGetPerf()` -- Pulls all Cash Transactions
 
-```excel
-=SPGRangeV("NYSE:MCD", "IQ_TOTAL_REV", "FY-4")
-=SPGRangeV("NYSE:IBM", "IQ_TOTAL_REV", "FQ-5", "04/01/2020", "Options: Curr=EUR, Mag=Millions, Dates=Before")
-```
-
-| Parameter | Description | Example |
-|---|---|---|
-| Identifier | Company ticker or S&P identifier | `"NYSE:IBM"` |
-| Metric | Data mnemonic | `"IQ_TOTAL_REV"` |
-| Beginning Period | Starting period for the time series | `"FQ-5"` |
-| As-Of Date | Optional: historical as-of date | `"04/01/2020"` |
-| Options | Optional: Currency, Magnitude, Dates position | `"Options: Curr=EUR, Mag=Millions, Dates=Before"` |
-
-### Detailed Ownership Range
-
-`SPGRangeV` can also pull a list of a company's top shareholders. Instead of a Beginning Period, provide a Start Rank and End Rank:
+Pulls all Cash Transactions for the selected Entity or Entity relationship.
 
 ```excel
-=SPGRangeV("NYSE:BAC", "SP_INSTITUTIONAL_VALUE", "1", "10", "10/5/2020", "SUMMARY", "Options: Rank=1/1/2020, Curr=GBP, Mag=Millions")
+=iGetPerf(iPathExpressions(iPathConfiguration("MustContainOwner",),"{""Data"":[[""Alpha Investors II, L.P.""]]}","{""Data"":[[""10 Pine Street""]]}"),,,"NAV",,,"Today","0D","RC",,"Actual","Today")
 ```
-
-## `=SPGScreen()` -- Saved Screens
-
-Embeds a saved screen or company list from the S&P Capital IQ Pro Data Wizard directly into Excel.
-
-**Syntax:** `=SPGScreen("Query Name", "Direction", Field ID Range, "Options:")`
-
-## `=SPGTable()` -- Multi-Company Grids
-
-Typically auto-generated when exporting a screen from the Data Wizard into Excel. Refreshes a large table of data across multiple entities, periods, and fields at once.
-
-```excel
-=SPGTable($B$26:$B$35, $C$23:$D$23, $C$24:$D$24, "Options:Curr=EUR, Mag=Thousands, ConvMethod=Recommended")
-```
-
----
-
-# AVAILABLE PERIOD TYPES
-
-## Historical / Current Periods (for `IQ_*` and `SNL_*` fundamentals)
-
-| Period Type | Actual | Relative |
-|---|---|---|
-| Calendar Year | `CY2018` | `CY0`, `CY-1`, ... |
-| Fiscal Year | `FY2018` | `FY0`, `FY-1`, ... |
-| Calendar Quarter | `CQ42018` | `CQ0`, `CQ-1`, ... |
-| Fiscal Quarter | `FQ42018` | `FQ0`, `FQ-1`, ... |
-| Last-Twelve-Months | `LTM42018` | `LTM`, `LTM-1`, ... |
-| Year-To-Date | `YTD42018` | `YTD` |
-| Half/Semi-Annual | `FH12018` | `FH0` |
-
-## Forward Periods (ONLY for consensus estimate mnemonics: `SP_*_EST`)
-
-| Period Type | Relative |
-|---|---|
-| Next-Twelve-Months | `NTM` |
-| Forward Fiscal Year | `FY+1`, `FY+2`, ... |
-| Forward Fiscal Quarter | `FQ+1`, `FQ+2`, ... |
-
-**CRITICAL: Forward periods (`FY+1`, `NTM`, etc.) cause `#INVALID FUNCTION PARAMETER` when used with `IQ_*` or `SNL_*` fundamental data items.** These periods ONLY work with consensus estimate mnemonics (`SP_REV_EST`, `SP_EBITDA_EST`, `SP_EPS_EST`, `SP_NI_EST`, `SP_EBIT_EST`, `SP_CFPS_EST`).
-
-**Building a model with historical + forecast columns:**
-```
-Historical (FY-4 to FY0):  =SPG($C$2, "IQ_TOTAL_REV", "FY-4")
-Forecast (FY+1, FY+2):     =SPG($C$2, "SP_REV_EST", "FY+1")
-```
-You MUST switch from `IQ_*` mnemonics to `SP_*_EST` mnemonics for forward periods.
-
----
-
-# OPTIONS STRING REFERENCE
-
-The Options string is an optional final parameter in any SPG formula. Arguments are comma-separated inside quotes, always beginning with `"Options:"`.
-
-```excel
-"Options: Curr=EUR, Mag=Millions, ConvMethod=Recommended"
-```
-
-## Currency (`Curr=` or `Currency=`)
-
-Converts monetary data into a target currency using a 3-character ISO code.
-
-```excel
-=SPG("AMZN", "IQ_TOTAL_REV", "FY2023", "Options: Curr=EUR")
-```
-
-## Magnitude (`Mag=` or `Magnitude=`)
-
-Scales monetary values to reduce trailing zeros.
-
-| Value | Alias |
-|---|---|
-| `Standard` | *(default -- uses source's native magnitude)* |
-| `Actuals` | `0` |
-| `Thousands` | `3` |
-| `Millions` | `6` |
-| `Billions` | `9` |
-| `Trillions` | `12` |
-
-```excel
-=SPG("AMZN", "IQ_TOTAL_REV", "FY2023", "Options: Mag=Millions")
-```
-
-## Conversion Method (`ConvMethod=`)
-
-Controls which exchange rate is used when converting currencies.
-
-| Value | Description |
-|---|---|
-| `Recommended` | Uses the exchange rate from the date the data was reported |
-| `MRSpot` | Uses the most recent spot rate available today |
-
-```excel
-=SPG("AMZN", "IQ_TOTAL_REV", "FY2023", "Options: Curr=GBP, ConvMethod=Recommended")
-```
-
-## Terminology (`Term=` or `Terminology=`)
-
-Translates text data outputs into different languages.
-
-| Value | Language |
-|---|---|
-| `zh-CN` | Chinese |
-| `en-GB` | British English |
-| `ja-JP` | Japanese |
-| `es-HN` | Spanish |
-| `pt-BR` | Portuguese |
-| `de-DE` | German |
-
-```excel
-=SPG("AMZN", "SP_COUNTRY_NAME", , "Options: Terminology=ja-JP")
-```
-
-## Other Common Options
-
-| Option | Description |
-|---|---|
-| `DataType=SD` or `DataType=CD` | Source data type (SD = S&P Data, CD = Consensus) |
-| `Fill=EOM` | Fill end-of-month for time series |
-| `Dates=Before` | Place date labels before values in SPGRangeV |
-
 ---
 
 # METRIC REFERENCE
