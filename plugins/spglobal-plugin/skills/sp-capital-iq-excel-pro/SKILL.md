@@ -32,7 +32,7 @@ Maintain professional tone in all outputs
 When modifying existing files, EXACTLY match existing format and conventions
 
 ---
-
+**TO DEVELOP**
 # FORMULA REFERENCE GUIDE
 
 **Complete Documentation:** `docs/SPG_OfficeReferenceGuide_v2_RANGEV.xlsx`
@@ -49,69 +49,92 @@ This Excel file contains:
 
 ## Identifier (Company Lookup)
 
-The first parameter in every SPG formula identifies which company or entity to look up.
+The first parameter in every iLEVEL formula identifies which company or entity to look up.
 
 | Format | Example | Description |
 |---|---|---|
-| Exchange:Ticker | `"NYSE:SPGI"` | Exchange-qualified ticker (PREFERRED) |
-| Ticker | `"SPGI"` | Bare ticker (less reliable -- can cause #INVALID COMPANY ID) |
-| Market Intelligence ID | `"4023623"` | Numeric MI identifier |
-| S&P Capital IQ ID | `"IQ21719"` | CIQ-prefixed identifier |
-| Rate symbol | `"%TCMSY10"` | Treasury/rate identifier |
-| Currency pair | `"$EURUSD"` | FX pair identifier |
+| Entity Name | `Bay View Hotel` | Full Entity Name (PREFERRED) |
+| Short Entity Name | `"Bay View"` | Short Entity Name |
 
-**ALWAYS prefer Exchange:Ticker format** (e.g., `"NASDAQ:NVDA"`, `"NYSE:MCD"`) to avoid ambiguity.
+## Scenario (Company Lookup)
+
+Performance case (Actual, Budget, Forecast)	
 
 ## Metric (Data Item)
 
-The second parameter is the mnemonic code for the specific data point to retrieve (e.g., `"IQ_TOTAL_REV"` for Total Revenue). See the full metric reference tables below.
+The second parameter is the mnemonic code for the specific data point to retrieve (e.g., `"Total Revenue"` for Total Revenue). See the full metric reference tables below.
+
+## Period End
+
+End date of the period for which data is being loaded or requested
+
+## Period Length
+
+Length of time for which data is being loaded or requested
+
+## Scale
+
+Multiplication factor for a value being loaded (e.g. thousands, millions, billions)
+
+## Fund
+
+When loading or retrieving data that relates to the Asset-Fund, use this parameter to enter the Fund Name (e.g. Ownership % between fund and asset)
+
+## Segment
+
+Security, as defined in iLEVEL under Entities, or Segment, as defined under Data Items, for which data is stored or retrieved
+
+## Currency
+	
+Currency in which data will be stored or retrieved (monetary data items only)
+
+## As Of Date
+
+Collection period during which data was loaded (using “Current” in an iGet formula retrieves the most recently loaded value). The As Of Date is used to submit and retrieve reforecasts, allowing the user to see how a value has changed over time.
 
 ## Cell Referencing
 
-All parameters in every SPG function support cell references in addition to direct inputs:
+All parameters in every iLEVEL function support cell references in addition to direct inputs:
 
 ```excel
-=SPG(A1, "IQ_TOTAL_REV", A2)
+=iGet(A1, "Actual", "Total Revenue", A2, A3)
 ```
 
-Where `A1` = `NASDAQ:AMZN`, `A2` = `LTM`
+Where `A1` = `Bay View Hotel`, `A2` = `Current`, `A3` = `RP`
 
 ## Model Setup Pattern
 
 Every spreadsheet MUST place the company identifier in a dedicated, clearly labeled cell and reference it with absolute references throughout:
 
 ```
-Cell B2: "Company Identifier"    (label)
-Cell C2: "NASDAQ:NVDA"          (value -- exchange-qualified)
+Cell C2: "Company Identifier"    (label)
 
 All formulas reference $C$2:
-=SPG($C$2, "IQ_TOTAL_REV", "FY2024")
-=SPG($C$2, "SP_MARKETCAP")
-=IFERROR(SPG($C$2, "SP_HEADCOUNT_LATEST"), "-")
+=iGet($C$2, "Total Revenue", "FY2024")
+=iGet($C$2, "NAV")
+=IFERROR(iGet($C$2, "Fund Type"), "-")
 ```
 
-- The identifier cell must contain a plain text value (e.g., `NASDAQ:NVDA`), NOT a formula
+- The identifier cell must contain a plain text value (e.g., `Bay View Hotel`), NOT a formula
 - Always use absolute references (`$C$2`) so formulas don't break when rows/columns shift
 - Wrap non-critical data items in `IFERROR()` to degrade gracefully
 
 ---
 
-# SPG FUNCTIONS
+# iGet FUNCTIONS
 
-## `=SPG()` -- Single Value
+## `=iGet()` -- Single Value
 
 Retrieves one specific data point for one specific time period.
 
-**Syntax:** `=SPG("Identifier", "Metric", "Period", "Options:")`
-
-Some metrics accept an additional As-Of Date parameter.
+**Syntax:** `=iGet("Identifier", "Scenario", "Metric", "Period End", "Period Length", "As of Date",,,,"Currency",,"Scale")`
 
 **Basic:**
 ```excel
-=SPG("AMZN", "IQ_TOTAL_REV", "LTM")
-=SPG("NYSE:MCD", "SP_PRICE_CLOSE", TODAY())
-=SPG("NYSE:MCD", "IQ_TEV")                                        -- TEV, no period needed
-=SPG("NYSE:MCD", "IQ_TEV_EBITDA")                                 -- TEV/EBITDA, no period needed
+=iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current",,,,"RC",,"Not Scaled")
+=iGet("Alpha Investors II, L.P.","Actual","NAV")
+=iGet("Alpha Investors II, L.P.","Actual","Fund Name (Long)")     -- Fund Name (Long), no period needed
+=iGet("Alpha Investors II, L.P.", "Strategy")                     -- Strategy, no period needed
 ```
 
 **With Options:**
