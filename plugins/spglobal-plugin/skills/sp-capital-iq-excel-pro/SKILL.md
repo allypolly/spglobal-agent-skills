@@ -6,7 +6,7 @@ description: Use this skill any time a financial analysis spreadsheet is needed 
 # CRITICAL RULES
 
 ## 1. NO HALLUCINATION OF DATA ITEMS
-**ONLY use data items documented in the Data Item Guide**
+**ONLY use data items documented in the `Data Item Guide`**
 - NEVER guess or invent data item names
 - If uncertain, check the Data Item Guide below 
 - Calculate missing ratios manually from documented items
@@ -283,7 +283,7 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 | VND    | Vietnamese Dong           |
 | ZAR    | South African rand        |
 
-# Data Item Guide
+## `Data Item Guide`
 
 ## Cash Flow Items
 | Data Item                                               | iLEVEL Excel                                            | Value Type | Actual? | Budget? | Valuation? | Forecast? |
