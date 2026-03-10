@@ -105,7 +105,7 @@ Length of time for which data is being loaded or requested.
 |`CYTD`|`CYTD`| Reporting Period of Calendar Year to Date|
 |`FYTD`|`FYTD`| Reporting Period of Fiscal Year to Date|
 
-Note: Use `LTM` as Default if not specified
+Note: Use `LTM` as Default in iGet formula if not specified
 
 ## Scale
 
@@ -129,6 +129,19 @@ Security, as defined in iLEVEL under Entities, or Segment, as defined under Data
 ## Currency
 	
 Currency in which data will be stored or retrieved (monetary data items only). See the full Currency Reference Table below and use the respective Currency Metric.
+
+Note: Use `RC` as Default in iGet formula if not specified
+
+## Fx Type
+
+| Fx Type | Description |
+|---|---|
+| `Spot` | `Rate on As of Date` |
+| `Acq` | `Rate on Acquisition Date` |
+| `Hist` | `Rate on Period End Date` |
+| `Avg` | `Average Rate over Period End Date` |
+
+Note: Use `Spot` as Default in iGet formula if not specified
 
 ## As Of Date
 
@@ -200,7 +213,7 @@ Retrieves one specific data point for one specific time period.
 ```
 
 **Retrieve `=iGet()` between Fund and Asset:**
-**Syntax:** `=iGet("Fund Name", "Scenario", "Metric", "Period End", "Period Length", "As of Date", "Asset Name", "Segment", "Offset", "Currency", "Fx Type", "Scale")`
+**Syntax:** `=iGet("Fund Name", "Scenario", "Data Item", "Period End", "Period Length", "As of Date", "Asset Name", "Segment", "Offset", "Currency", "Fx Type", "Scale")`
 ```excel
 =iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current","Always_Safe_Insurance_-_Demo","Security 1","1M","RC","Spot","Not Scaled")
 ```
