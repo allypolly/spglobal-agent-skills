@@ -105,6 +105,8 @@ Length of time for which data is being loaded or requested.
 |`CYTD`|`CYTD`| Reporting Period of Calendar Year to Date|
 |`FYTD`|`FYTD`| Reporting Period of Fiscal Year to Date|
 
+Note: Use `LTM` as Default if not specified
+
 ## Scale
 
 Scales monetary values to reduce trailing zeros. Use the Value in the formula, DO NOT use the units.
@@ -767,6 +769,4 @@ Where: `C4` = Company Identifier cell, `C5` = Scenario cell, `B12` = the cell co
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
 
 ## 5. Data Items should NOT have spaces before or after
-
-## 6. Use `LTM` as the Default 
 
