@@ -710,27 +710,13 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 
 # COMMON PITFALLS
 
-## 1. Never use `IQ_COST_REV`
-`IQ_COST_REV` is unreliable and returns `#INVALID FUNCTION PARAMETER` for many companies. **Always use `IQ_COGS`** for Cost of Goods Sold / Cost of Revenue.
-
-## 2. Using forward periods with fundamental mnemonics
-`IQ_*` and `SNL_*` data items only support historical/current periods (`FY0`, `FY-1`, `LTM`, etc.). Using `FY+1`, `NTM`, or any forward period with them returns `#INVALID FUNCTION PARAMETER`. For forward-looking data, switch to consensus estimate mnemonics:
-
-| Historical (IQ_*) | Forward (SP_*_EST) |
-|---|---|
-| `IQ_TOTAL_REV` | `SP_REV_EST` |
-| `IQ_EBITDA` | `SP_EBITDA_EST` |
-| `IQ_EBIT` | `SP_EBIT_EST` |
-| `IQ_NET_INC` | `SP_NI_EST` |
-| `IQ_DILUT_EPS_BEFORE_EXTRA` | `SP_EPS_EST` |
-
-**Only the above line items have consensus estimate mnemonics.** All other income statement line items (COGS, R&D, SGA, D&A, Interest Expense, Tax Expense, Effective Tax Rate, Basic EPS, Share Counts, etc.) have NO estimate equivalent. For estimate columns (FY+1E, FY+2E), **leave cells blank** for line items without a consensus mnemonic -- do NOT write `"-"` or any placeholder.
-
-## 3. Using `=@SPG()` in openpyxl
-Never include `@` in formula strings. Write `=SPG(...)` -- Excel adds `@` at display time.
-
-## 4. Using bare tickers as identifiers
-Always use exchange-qualified format (`"NASDAQ:NVDA"`) to avoid `#INVALID COMPANY ID`.
-
-## 5. Writing `"-"` for unavailable data
+## 1.For Text Data such as Fund Attributes or Company Attributes, wrap iGET formula with SUBSTITUTE
+```excel
+=SUBSTITUTE(iGet($D32,BM$2,BM$7,BM$3,BM$10,BM$5,,,,,,),"No Data Available","")
+```
+## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGET formula with IFERROR
+```excel
+=IFERROR(iGet($D29,BO$2,BO$7,BO$3,BO$10,BO$5,,,,,,)/1
+```
+## 3. Writing `"-"` for unavailable data
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
