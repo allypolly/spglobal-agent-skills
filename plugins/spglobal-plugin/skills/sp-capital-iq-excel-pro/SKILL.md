@@ -35,8 +35,6 @@ When modifying existing files, EXACTLY match existing format and conventions
 
 **Correct:** `cell.value = '=iGet("Bay View Hotel","Actual","Total Revenue","Latest Approved")`
 **Wrong:** `cell.value = '=@iGet("Bay View Hotel","Actual"," Total Revenue","Latest Approved")`
-OR
-cell.value = '=@iGet("Bay View Hotel"," Actual"," Total Revenue","Latest Approved")`
 
 ---
 **TO DEVELOP**
