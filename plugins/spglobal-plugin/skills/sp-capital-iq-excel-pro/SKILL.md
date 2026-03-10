@@ -8,7 +8,7 @@ description: Use this skill any time a financial analysis spreadsheet is needed 
 ## 1. NO HALLUCINATION OF DATA ITEMS
 **ONLY use data items documented in this skill file**
 - NEVER guess or invent data item names
-- If uncertain, check the metric reference tables below or the Excel reference guide
+- If uncertain, check the Data Item Guide below 
 - Calculate missing ratios manually from documented items
 
 ## 2. ZERO FORMULA ERRORS
@@ -280,6 +280,8 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 | VEF    | Venezuelan bolívar fuerte |
 | VND    | Vietnamese Dong           |
 | ZAR    | South African rand        |
+
+# Data Item Guide
 
 ## Cash Flow Items
 
