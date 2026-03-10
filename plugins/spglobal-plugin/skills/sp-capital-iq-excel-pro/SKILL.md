@@ -31,7 +31,12 @@ Maintain professional tone in all outputs
 ## 5. PRESERVE EXISTING TEMPLATES
 When modifying existing files, EXACTLY match existing format and conventions
 
-## 6. DO NOT put spaces before or after Data Items
+## 6. DO NOT put ANY spaces before or after Data Items, AND all metrics within iGet formulas
+
+**Correct:** `cell.value = '=iGet("Bay View Hotel","Actual","Total Revenue","Latest Approved")`
+**Wrong:** `cell.value = '=@iGet("Bay View Hotel","Actual"," Total Revenue","Latest Approved")`
+OR
+cell.value = '=@iGet("Bay View Hotel"," Actual"," Total Revenue","Latest Approved")`
 
 ---
 **TO DEVELOP**
