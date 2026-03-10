@@ -31,6 +31,8 @@ Maintain professional tone in all outputs
 ## 5. PRESERVE EXISTING TEMPLATES
 When modifying existing files, EXACTLY match existing format and conventions
 
+## 6. DO NOT put spaces before or after Data Items
+
 ---
 **TO DEVELOP**
 # FORMULA REFERENCE GUIDE
@@ -782,6 +784,4 @@ Where: `C4` = Company Identifier cell, `C5` = Scenario cell, `B12` = the cell co
 
 ## 4. Writing `"-"` for unavailable data
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
-
-## 5. Data Items should NOT have spaces before or after
 
