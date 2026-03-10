@@ -185,11 +185,20 @@ All formulas reference $C$2:
 
 Retrieves one specific data point for one specific time period.
 
-**Syntax:** `=iGet("Identifier", "Scenario", "Metric", "Period End", "Period Length", "As of Date",,,,"Currency",,"Scale")`
+**Syntax:** `=iGet(Identifier, Scenario, Metric, "Period End", "Period Length", "As of Date",,,,"Currency","Fx Type","Scale")`
 
-**Basic:**
+- **Identifier, Scenario, Metric** MUST be cell references (e.g. `C4`, `C5`, `B12`) — do NOT wrap these in quotes
+- **Period End, Period Length, As of Date, Currency, Fx Type, Scale** are hardcoded string literals in quotes
+
+**Standard Income Statement formula (cell references for first 3 params):**
 ```excel
-=iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current",,,,"RC",,"Not Scaled")
+=IFERROR(iGet(C4,C5,B12,"Current","RP","Current",,,,"RC","Spot","Not Scaled")/1,"")
+```
+Where: `C4` = Company Identifier, `C5` = Scenario, `B12` = Metric label cell
+
+**Basic (hardcoded identifiers, for reference only):**
+```excel
+=iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current",,,,"RC","Spot","Not Scaled")
 =iGet("Alpha Investors II, L.P.","Actual","NAV")
 =iGet("Alpha Investors II, L.P.","Actual","Fund Name (Long)")     -- Fund Name (Long), no period needed
 =iGet("Alpha Investors II, L.P.", "Strategy")                     -- Strategy, no period needed
@@ -207,7 +216,7 @@ Retrieves one specific data point for one specific time period.
 
 Pulls all of the Fund/Asset Relationships into the Excel File. Note, Sheet1!U8:V1291 of the syntax below can change according to the number of Fund/Asset Relationships.
 
-**Syntax:** =@iGetArray(Sheet1!U8:V1291,"Screening","{""Items"":[""All Assets""]}","{""FundTypes"":[""Legal Entity"",""Fund"",""Directs"",""Fund of Fund""],""Items"":[""Portfolio""]}","Direct",,,"{""Show"":""Fund,Investment""}")
+**Syntax:** =iGetArray(Sheet1!U8:V1291,"Screening","{""Items"":[""All Assets""]}","{""FundTypes"":[""Legal Entity"",""Fund"",""Directs"",""Fund of Fund""],""Items"":[""Portfolio""]}","Direct",,,"{""Show"":""Fund,Investment""}")
 
 ## `=iGetPerf()` -- Pulls all Cash Transactions
 
@@ -708,17 +717,25 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 
 **When in doubt:** Check the metric reference tables above or the Excel reference guide. If not found, it does NOT exist.
 
----
 
 # COMMON PITFALLS
 
-## 1.For Text Data such as Fund Attributes or Company Attributes, wrap iGET formula with SUBSTITUTE
+## 1. For Text Data such as Fund Attributes or Company Attributes, wrap iGet formula with SUBSTITUTE
 ```excel
-=SUBSTITUTE(iGet($D32,BM$2,BM$7,BM$3,BM$10,BM$5,,,,,,),"No Data Available","")
+=SUBSTITUTE(iGet(C4,C5,B12,"Current","RP","Current",,,,"RC","Spot","Not Scaled"),"No Data Available","")
 ```
-## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGET formula with IFERROR. It is crucial to /1 after iGet.
+
+## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGet formula with IFERROR. It is crucial to add /1 after the iGet call.
 ```excel
-=IFERROR(iGet($D29,BO$2,BO$7,BO$3,BO$10,BO$5,,,,,,)/1,"")
+=IFERROR(iGet(C4,C5,B12,"Current","RP","Current",,,,"RC","Spot","Not Scaled")/1,"")
 ```
-## 3. Writing `"-"` for unavailable data
+Where: `C4` = Company Identifier cell, `C5` = Scenario cell, `B12` = the cell containing the metric label (e.g. "Total Revenue")
+
+## 3. Cell References vs Hardcoded Strings
+- Identifier, Scenario, and Metric MUST reference cells — do NOT hardcode them as quoted strings in the formula
+- Period End, Period Length, As of Date, Currency, Fx Type, Scale are always hardcoded string literals
+- Always use `"Spot"` for Fx Type and `"Not Scaled"` for Scale in standard Income Statement formulas
+
+## 4. Writing `"-"` for unavailable data
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
+
