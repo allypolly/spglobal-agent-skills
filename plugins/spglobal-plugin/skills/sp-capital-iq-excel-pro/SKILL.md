@@ -722,12 +722,12 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 
 # COMMON PITFALLS
 
-## 1. For Text Data such as Fund Attributes or Company Attributes, wrap iGet formula with SUBSTITUTE
+## 1. For `Value Type` = `Text`, wrap iGet formula with SUBSTITUTE
 ```excel
 =SUBSTITUTE(iGet(C4,C5,B12,"Current","RP","Current",,,,"RC","Spot","Not Scaled"),"No Data Available","")
 ```
 
-## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGet formula with IFERROR. It is crucial to add /1 after the iGet call.
+## 2. For `Value Type` = `Numeric`of `Date`, wrap iGet formula with IFERROR. It is crucial to add /1 after the iGet call.
 ```excel
 =IFERROR(iGet(C4,C5,B12,"Current","RP","Current",,,,"RC","Spot","Not Scaled")/1,"")
 ```
