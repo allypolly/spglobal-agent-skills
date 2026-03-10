@@ -164,7 +164,8 @@ Collection period during which data was loaded (using “Current” in an iGet f
 
 **Building a model with historical columns:**
 ```
-Historical Total Revenue (FY-4):  =iGet(A1,"Actual","Total Revenue","Current","RP","Current",,,"4Y","RC","Spot","Not Scaled")
+Historical Total Revenue (FY-4):  =iGet(A1,"Actual","Total Revenue","Current","RP","Current",,,"-4Y","RC","Spot","Not Scaled")
+Future Total Revenue (FY+4):  =iGet(A1,"Actual","Total Revenue","Current","RP","Current",,,"4Y","RC","Spot","Not Scaled")
 ```
 
 Where `A1` = `Bay View Hotel`
@@ -217,7 +218,7 @@ Retrieves one specific data point for one specific time period.
 ```excel
 =iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current","Always_Safe_Insurance_-_Demo","Security 1","1M","RC","Spot","Not Scaled")
 ```
-This iGet would retrieve the Total Revenue between Alpha Investors II, L.P. and Always_Safe_Insurance_-_Demo for the Segment Security 1 as an Actual value as of the Reporting Period As of the Current Date and Current Period End. The value will not be Scaled and it will be in Reported Currency and using the Spot rate.
+This iGet would retrieve the Total Revenue between Alpha Investors II, L.P. and Always_Safe_Insurance_-_Demo for the Segment Security 1 as an Actual value as of the Reporting Period As of the Current Date and Current Period End. The value will not be Scaled and it will be in Reported Currency and using the Spot rate. The value will be Offset by +1 Month.
 
 **TO DEVELOP**
 
