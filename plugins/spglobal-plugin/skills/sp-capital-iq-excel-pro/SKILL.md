@@ -684,37 +684,62 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 | Fund Status       | Fund Status       | List       | Yes     | No      | No         | No        |
 
 ## Balance Sheet
-| Data Item                    | iLEVEL Excel                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
-| ---------------------------- | ---------------------------- | ---------- | ------- | ------- | ---------- | --------- |
-| Cash and Cash Equivalents    | Cash and Cash Equivalents    | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Accounts Receivable          | Accounts Receivable          | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Inventory                    | Inventory                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Total Current Assets         | Total Current Assets         | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Property Plant & Equipment   | Property Plant & Equipment   | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Intangible Assets            | Intangible Assets            | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Total Assets                 | Total Assets                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Accounts Payable             | Accounts Payable             | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Short-Term Debt              | Short-Term Debt              | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Total Current Liabilities    | Total Current Liabilities    | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Long-Term Debt               | Long-Term Debt               | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Total Liabilities            | Total Liabilities            | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Shareholder Equity           | Shareholder Equity           | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Total Liabilities and Equity | Total Liabilities and Equity | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Data Item                       | iLEVEL Excel                    | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------------- | ------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Short-Term Investments          | Short-Term Investments          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cash and Short-Term Investments | Cash and Short-Term Investments | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Accounts Receivable             | Accounts Receivable             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Inventory                       | Inventory                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Other Current Assets            | Other Current Assets            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Current Assets            | Total Current Assets            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Property Plant & Equipment      | Property Plant & Equipment      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Goodwill                        | Goodwill                        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Long-Term Assets          | Total Long-Term Assets          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Assets                    | Total Assets                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Accounts Payable                | Accounts Payable                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Other Current Liabilities       | Other Current Liabilities       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Current Liabilities       | Total Current Liabilities       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Long Term Debt                  | Long Term Debt                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Minority Interest               | Minority Interest               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Long-Term Liabilities     | Total Long-Term Liabilities     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Liabilities               | Total Liabilities               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Shareholder Equity              | Shareholder Equity              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Liabilities & Equity      | Total Liabilities & Equity      | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Income Statement
-| Data Item                   | iLEVEL Excel                | Value Type | Actual? | Budget? | Valuation? | Forecast? |
-| --------------------------- | --------------------------- | ---------- | ------- | ------- | ---------- | --------- |
-| Revenue                     | Revenue                     | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Cost of Goods Sold          | Cost of Goods Sold          | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Gross Profit                | Gross Profit                | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Operating Expenses          | Operating Expenses          | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| EBITDA                      | EBITDA                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Depreciation & Amortization | Depreciation & Amortization | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Operating Income            | Operating Income            | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Interest Expense            | Interest Expense            | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Pre-Tax Income              | Pre-Tax Income              | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Taxes                       | Taxes                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
-| Net Income                  | Net Income                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Data Item                               | iLEVEL Excel                            | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| --------------------------------------- | --------------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Total Revenue                           | Total Revenue                           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Non-Operating Income                    | Non-Operating Income                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Expenses                                | Expenses                                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cost of Goods Sold                      | Cost of Goods Sold                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| SG&A                                    | SG&A                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Depreciation & Amortization             | Depreciation & Amortization             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Other Operating Expense/(Income), Total | Other Operating Expense/(Income), Total | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Interest Expense                  | Total Interest Expense                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Tax Expense                             | Tax Expense                             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Key Performance Indicators              | Key Performance Indicators              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Widgets Produced                        | Widgets Produced                        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Widgets Rejected                        | Widgets Rejected                        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Rejection Rate                          | Rejection Rate                          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Operating Rate                          | Operating Rate                          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Takt Time (Minutes)                     | Takt Time (Minutes)                     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Recent Developments                     | Recent Developments                     | Text       | Yes     | Yes     | Yes        | Yes       |
+| Financial Highlights                    | Financial Highlights                    | Text       | Yes     | Yes     | Yes        | Yes       |
+| Net Income                              | Net Income                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Sales                                   | Sales                                   | Numeric    | Yes     | No      | No         | No        |
+| Cost of Sales                           | Cost of Sales                           | Numeric    | Yes     | No      | No         | No        |
+| Other Income                            | Other Income                            | Numeric    | Yes     | No      | No         | No        |
+| Gross Profit                            | Gross Profit                            | Numeric    | Yes     | No      | No         | No        |
+| Administration Expense                  | Administration Expense                  | Numeric    | Yes     | No      | No         | No        |
+| Employee Benefits Expense               | Employee Benefits Expense               | Numeric    | Yes     | No      | No         | No        |
+| Depreciation & Amortisation Expense     | Depreciation & Amortisation Expense     | Numeric    | Yes     | No      | No         | No        |
+| Rent                                    | Rent                                    | Numeric    | Yes     | No      | No         | No        |
+| Other Expenses                          | Other Expenses                          | Numeric    | Yes     | No      | No         | No        |
+| Finance Costs                           | Finance Costs                           | Numeric    | Yes     | No      | No         | No        |
+| Total Expenses                          | Total Expenses                          | Numeric    | Yes     | No      | No         | No        |
+| EBIT                                    | EBIT                                    | Numeric    | Yes     | No      | No         | No        |
+| EPAT                                    | EPAT                                    | Numeric    | Yes     | No      | No         | No        |
 
 **When in doubt:** Check the metric reference tables above or the Excel reference guide. If not found, it does NOT exist.
 
@@ -742,4 +767,6 @@ Where: `C4` = Company Identifier cell, `C5` = Scenario cell, `B12` = the cell co
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
 
 ## 5. Data Items should NOT have spaces before or after
+
+## 6. Use `LTM` as the Default 
 
