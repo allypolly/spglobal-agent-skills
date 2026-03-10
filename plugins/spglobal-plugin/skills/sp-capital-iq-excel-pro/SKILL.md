@@ -149,8 +149,10 @@ Collection period during which data was loaded (using “Current” in an iGet f
 
 **Building a model with historical columns:**
 ```
-Historical Total Revenue (FY-4):  =iGet($C$2, "Total Revenue", "4Y")
+Historical Total Revenue (FY-4):  =iGet(A1,"Actual","Total Revenue","Current","RP","Current",,,"4Y","RC","Spot","Not Scaled")
 ```
+
+Where `A1` = `Bay View Hotel`
 
 ## Cell Referencing
 
