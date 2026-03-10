@@ -74,7 +74,7 @@ Performance case scenario of which data is derived from. This is designated for 
 |`Budget`|Budget data that is planned but not confirmed yet|
 |`Forecast`|Forecast data that is forecast in the future|
 
-## Metric (Data Item)
+## Data Item
 
 The second parameter is the mnemonic code for the specific data point to retrieve (e.g., `"Total Revenue"` for Total Revenue). See the full metric reference tables below.
 
@@ -202,7 +202,7 @@ All formulas reference $C$2:
 
 Retrieves one specific data point for one specific time period.
 
-**Syntax:** `=iGet("Identifier", "Scenario", "Metric", "Period End", "Period Length", "As of Date",,,,"Currency",,"Scale")`
+**Syntax:** `=iGet("Identifier", "Scenario", "Data Item", "Period End", "Period Length", "As of Date",,,,"Currency",,"Scale")`
 
 **Basic:**
 ```excel
@@ -217,6 +217,7 @@ Retrieves one specific data point for one specific time period.
 ```excel
 =iGet("Alpha Investors II, L.P.","Actual","Total Revenue","Current","RP","Current","Always_Safe_Insurance_-_Demo","Security 1","1M","RC","Spot","Not Scaled")
 ```
+This iGet would retrieve the Total Revenue between Alpha Investors II, L.P. and Always_Safe_Insurance_-_Demo for the Segment Security 1 as an Actual value as of the Reporting Period As of the Current Date and Current Period End. The value will not be Scaled and it will be in Reported Currency and using the Spot rate.
 
 **TO DEVELOP**
 
