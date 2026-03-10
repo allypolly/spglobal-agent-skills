@@ -107,9 +107,9 @@ Length of time for which data is being loaded or requested.
 
 ## Scale
 
-Scales monetary values to reduce trailing zeros.
+Scales monetary values to reduce trailing zeros. Use the Value in the formula, DO NOT use the units.
 
-| Value | Alias |
+| Value | Units |
 |---|---|
 | `Not Scaled` | `0` |
 | `Thousands` | `3` |
@@ -714,9 +714,9 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 ```excel
 =SUBSTITUTE(iGet($D32,BM$2,BM$7,BM$3,BM$10,BM$5,,,,,,),"No Data Available","")
 ```
-## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGET formula with IFERROR
+## 2. For Number or Date Data such as Income Statement or Acquisition Date, wrap iGET formula with IFERROR. It is crucial to /1 after iGet.
 ```excel
-=IFERROR(iGet($D29,BO$2,BO$7,BO$3,BO$10,BO$5,,,,,,)/1
+=IFERROR(iGet($D29,BO$2,BO$7,BO$3,BO$10,BO$5,,,,,,)/1,"")
 ```
 ## 3. Writing `"-"` for unavailable data
 Never write `"-"` or any placeholder into cells where data is known to be unavailable. Leave the cell blank. This applies to estimate columns where no consensus mnemonic exists, and to any line item where the data item is not applicable.
