@@ -6,7 +6,7 @@ description: Use this skill any time a financial analysis spreadsheet is needed 
 # CRITICAL RULES
 
 ## 1. NO HALLUCINATION OF DATA ITEMS
-**ONLY use data items documented in this skill file**
+**ONLY use data items documented in the Data Item Guide**
 - NEVER guess or invent data item names
 - If uncertain, check the Data Item Guide below 
 - Calculate missing ratios manually from documented items
