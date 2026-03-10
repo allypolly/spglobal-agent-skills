@@ -31,10 +31,10 @@ Maintain professional tone in all outputs
 ## 5. PRESERVE EXISTING TEMPLATES
 When modifying existing files, EXACTLY match existing format and conventions
 
-## 6. DO NOT put ANY spaces before or after Data Items, AND all metrics within iGet formulas
-
-**Correct:** `cell.value = '=iGet("Bay View Hotel","Actual","Total Revenue","Latest Approved")`
-**Wrong:** `cell.value = '=@iGet("Bay View Hotel","Actual"," Total Revenue","Latest Approved")`
+## 6. ## 6. DO NOT put spaces before or after Data Items, Offsets, or ANY string parameters
+- Correct: `"-1Y"` `"-4Y"` `"LTM"` `"Not Scaled"`
+- Wrong:   `"- 1Y"` `" LTM"` `"Not Scaled "` `" -4Y"`
+Spaces inside quoted strings are treated as part of the value and will break the formula silently.DO NOT put ANY spaces before or after Data Items, AND all metrics within iGet formulas
 
 ---
 **TO DEVELOP**
