@@ -34,8 +34,7 @@ When modifying existing files, EXACTLY match existing format and conventions
 ## 6. DO NOT put spaces before or after Data Items, Offsets, or ANY string parameters
 - Correct: `"-1Y"` `"-4Y"` `"LTM"` `"Not Scaled"`
 - Wrong:   `"- 1Y"` `" LTM"` `"Not Scaled "` `" -4Y"`
-Spaces inside quoted strings are treated as part of the value and will break the formula silently.DO NOT put ANY spaces before or after Data Items, AND all metrics within iGet formulas
-
+Spaces inside quoted strings are treated as part of the value and will break the formula silently.
 ---
 **TO DEVELOP**
 # FORMULA REFERENCE GUIDE
