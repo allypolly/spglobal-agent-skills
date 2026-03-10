@@ -67,7 +67,7 @@ The first parameter in every iLEVEL formula identifies which company or entity t
 
 ## Scenario (Company Lookup)
 
-Performance case scenario of which data is derived from.
+Performance case scenario of which data is derived from. This is designated for each Data Item , so refer to full metric reference tables below.
 | Format | Description |
 |---|---|
 |`Actual`|Historical data that is already confirmed|
