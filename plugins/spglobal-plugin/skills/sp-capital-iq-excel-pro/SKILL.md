@@ -286,427 +286,435 @@ Pulls all Cash Transactions for the selected Entity or Entity relationship.
 # Data Item Guide
 
 ## Cash Flow Items
-
-| Metric                                                  | Mnemonic                                                |
-| ------------------------------------------------------- | ------------------------------------------------------- |
-| Management Fee (outside commitment) - CF                | Management Fee (outside commitment) - CF                |
-| Partnership Expenses (outside commitment) - CF          | Partnership Expenses (outside commitment) - CF          |
-| Income - CF                                             | Income - CF                                             |
-| Unfunded Adjustment - CF                                | Unfunded Adjustment - CF                                |
-| Partnership Expenses - CF                               | Partnership Expenses - CF                               |
-| Temporary Return of Capital - Investment - CF           | Temporary Return of Capital - Investment - CF           |
-| Return of Capital - Management Fees - CF                | Return of Capital - Management Fees - CF                |
-| Org. Cost (Inside Commitment) - CF                      | Org. Cost (Inside Commitment) - CF                      |
-| Investments - CF                                        | Investments - CF                                        |
-| Management Fee (inside commitment) - CF                 | Management Fee (inside commitment) - CF                 |
-| Withholding Tax - CF                                    | Withholding Tax - CF                                    |
-| Return of Capital - Stock - CF                          | Return of Capital - Stock - CF                          |
-| Carry - CF                                              | Carry - CF                                              |
-| Interest Income - CF                                    | Interest Income - CF                                    |
-| Realized Gain/Loss - Cash - CF                          | Realized Gain/Loss - Cash - CF                          |
-| Return of Excess Capital - Called - CF                  | Return of Excess Capital - Called - CF                  |
-| Dividend Income - CF                                    | Dividend Income - CF                                    |
-| Return of Capital - Cash - CF                           | Return of Capital - Cash - CF                           |
-| Commitment Amount                                       | Commitment Amount                                       |
-| Cost Basis Adjustment - CF                              | Cost Basis Adjustment - CF                              |
-| Recallable Income - CF                                  | Recallable Income - CF                                  |
-| Subsequent Close Interest (Distribution) - CF           | Subsequent Close Interest (Distribution) - CF           |
-| Recallable Realized Gain/Loss - CF                      | Recallable Realized Gain/Loss - CF                      |
-| Investments (Outside commitment) - CF                   | Investments (Outside commitment) - CF                   |
-| Realized Gain/Loss - Stock - CF                         | Realized Gain/Loss - Stock - CF                         |
-| Recallable Dividend Income - CF                         | Recallable Dividend Income - CF                         |
-| Recallable Interest Income - CF                         | Recallable Interest Income - CF                         |
-| Return of Capital - Partnership Expenses - CF           | Return of Capital - Partnership Expenses - CF           |
-| Subsequent Close Interest (Call) - CF                   | Subsequent Close Interest (Call) - CF                   |
-| Temporary Return of Capital - Management Fees - CF      | Temporary Return of Capital - Management Fees - CF      |
-| Temporary Return of Capital - Partnership Expenses - CF | Temporary Return of Capital - Partnership Expenses - CF |
+| Data Item                                               | iLEVEL Excel                                            | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------------------------------------- | ------------------------------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Management Fee (outside commitment) - CF                | Management Fee (outside commitment) - CF                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Partnership Expenses (outside commitment) - CF          | Partnership Expenses (outside commitment) - CF          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Income - CF                                             | Income - CF                                             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Unfunded Adjustment - CF                                | Unfunded Adjustment - CF                                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Partnership Expenses - CF                               | Partnership Expenses - CF                               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Temporary Return of Capital - Investment - CF           | Temporary Return of Capital - Investment - CF           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Return of Capital - Management Fees - CF                | Return of Capital - Management Fees - CF                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Org. Cost (Inside Commitment) - CF                      | Org. Cost (Inside Commitment) - CF                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Investments - CF                                        | Investments - CF                                        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Management Fee (inside commitment) - CF                 | Management Fee (inside commitment) - CF                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Withholding Tax - CF                                    | Withholding Tax - CF                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Return of Capital - Stock - CF                          | Return of Capital - Stock - CF                          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Carry - CF                                              | Carry - CF                                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Interest Income - CF                                    | Interest Income - CF                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Realized Gain/Loss - Cash - CF                          | Realized Gain/Loss - Cash - CF                          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Return of Excess Capital - Called - CF                  | Return of Excess Capital - Called - CF                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Dividend Income - CF                                    | Dividend Income - CF                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Return of Capital - Cash - CF                           | Return of Capital - Cash - CF                           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Commitment Amount                                       | Commitment Amount                                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cost Basis Adjustment - CF                              | Cost Basis Adjustment - CF                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Recallable Income - CF                                  | Recallable Income - CF                                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Subsequent Close Interest (Distribution) - CF           | Subsequent Close Interest (Distribution) - CF           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Recallable Realized Gain/Loss - CF                      | Recallable Realized Gain/Loss - CF                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Investments (Outside commitment) - CF                   | Investments (Outside commitment) - CF                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Realized Gain/Loss - Stock - CF                         | Realized Gain/Loss - Stock - CF                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Recallable Dividend Income - CF                         | Recallable Dividend Income - CF                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Recallable Interest Income - CF                         | Recallable Interest Income - CF                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Return of Capital - Partnership Expenses - CF           | Return of Capital - Partnership Expenses - CF           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Subsequent Close Interest (Call) - CF                   | Subsequent Close Interest (Call) - CF                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Temporary Return of Capital - Management Fees - CF      | Temporary Return of Capital - Management Fees - CF      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Temporary Return of Capital - Partnership Expenses - CF | Temporary Return of Capital - Partnership Expenses - CF | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Additional Investment                               | MLC Additional Investment                               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Non-Capitalized Expense                             | MLC Non-Capitalized Expense                             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Reported Market Value                               | MLC Reported Market Value                               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Capitalized Expense                                 | MLC Capitalized Expense                                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Realized Gain/Loss                                  | MLC Realized Gain/Loss                                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Return of Capital                                   | MLC Return of Capital                                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Interest Payment                                    | MLC Interest Payment                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MLC Original Investment                                 | MLC Original Investment                                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Calculated Items
-
-| Metric                          | Mnemonic                        |
-| ------------------------------- | ------------------------------- |
-| TVM                             | TVM                             |
-| Unrealized Investment Multiple  | Unrealized Investment Multiple  |
-| Realized Investment Multiple    | Realized Investment Multiple    |
-| Net IRR                         | Net IRR                         |
-| Contributions                   | Contributions                   |
-| Distributions                   | Distributions                   |
-| DPI - CF                        | DPI - CF                        |
-| Net Cash Flow - CF              | Net Cash Flow - CF              |
-| TVPI - CF                       | TVPI - CF                       |
-| RVPI - CF                       | RVPI - CF                       |
-| MOIC - CF                       | MOIC - CF                       |
-| Gross IRR                       | Gross IRR                       |
-| TWR - Modified Dietz            | TWR - Modified Dietz            |
-| TWR - Simple Dietz              | TWR - Simple Dietz              |
-| Funded Commitment               | Funded Commitment               |
-| Unfunded Commitment             | Unfunded Commitment             |
-| Covid Adj                       | Covid Adj                       |
+| Data Item                       | iLEVEL Excel                    | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------------- | ------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| TVM                             | TVM                             | Numeric    | Yes     | No      | No         | No        |
+| Unrealized Investment Multiple  | Unrealized Investment Multiple  | Numeric    | Yes     | No      | No         | No        |
+| Realized Investment Multiple    | Realized Investment Multiple    | Numeric    | Yes     | No      | No         | No        |
+| Net IRR                         | Net IRR                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Contributions                   | Contributions                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Distributions                   | Distributions                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| DPI - CF                        | DPI - CF                        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Net Cash Flow - CF              | Net Cash Flow - CF              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| TVPI - CF                       | TVPI - CF                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| RVPI - CF                       | RVPI - CF                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| MOIC - CF                       | MOIC - CF                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Gross IRR                       | Gross IRR                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| TWR - Modified Dietz            | TWR - Modified Dietz            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| TWR - Simple Dietz              | TWR - Simple Dietz              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Funded Commitment               | Funded Commitment               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Unfunded Commitment             | Unfunded Commitment             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Covid Adj                       | Covid Adj                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Calendar Items
-
-| Metric                       | Mnemonic                     |
-| ---------------------------- | ---------------------------- |
-| Acquisition AsOf             | Acquisition AsOf             |
-| Exit AsOf                    | Exit AsOf                    |
-| Fiscal Year                  | Fiscal Year                  |
-| Fiscal Year End Date         | Fiscal Year End Date         |
-| Calendar Year                | Calendar Year                |
-| Calendar Year End            | Calendar Year End            |
-| Fiscal Quarter End           | Fiscal Quarter End           |
-| Fiscal Month                 | Fiscal Month                 |
-| Fiscal Quarter               | Fiscal Quarter               |
-| Calendar Quarter             | Calendar Quarter             |
-| Current Period Date          | Current Calendar Period Date |
-| Current Calendar Period      | Current Calendar Period      |
-| Current Fiscal Period        | Current Fiscal Period        |
-| Latest Period Date           | Latest Calendar Period Date  |
-| Latest Calendar Period       | Latest Calendar Period       |
-| Latest Fiscal Period         | Latest Fiscal Period         |
-| Fiscal Period                | Fiscal Period                |
-| Calendar Quarter End         | Calendar Quarter End         |
-| iLEVEL Client Current Date   | iLEVEL Client Current Date   |
-| Fund Latest Transaction Date | Fund Latest Transaction Date |
+| Data Item                    | iLEVEL Excel                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ---------------------------- | ---------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Acquisition AsOf             | Acquisition AsOf             | Date       | Yes     | Yes     | Yes        | Yes       |
+| Exit AsOf                    | Exit AsOf                    | Date       | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Year                  | Fiscal Year                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Year End Date         | Fiscal Year End Date         | Date       | Yes     | Yes     | Yes        | Yes       |
+| Calendar Year                | Calendar Year                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Calendar Year End            | Calendar Year End            | Date       | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Quarter End           | Fiscal Quarter End           | Date       | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Month                 | Fiscal Month                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Quarter               | Fiscal Quarter               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Calendar Quarter             | Calendar Quarter             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Current Period Date          | Current Calendar Period Date | Date       | Yes     | Yes     | Yes        | Yes       |
+| Current Calendar Period      | Current Calendar Period      | Text       | Yes     | Yes     | Yes        | Yes       |
+| Current Fiscal Period        | Current Fiscal Period        | Text       | Yes     | Yes     | Yes        | Yes       |
+| Latest Period Date           | Latest Calendar Period Date  | Date       | Yes     | Yes     | Yes        | Yes       |
+| Latest Calendar Period       | Latest Calendar Period       | Text       | Yes     | Yes     | Yes        | Yes       |
+| Latest Fiscal Period         | Latest Fiscal Period         | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Period                | Fiscal Period                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Calendar Quarter End         | Calendar Quarter End         | Date       | Yes     | Yes     | Yes        | Yes       |
+| iLEVEL Client Current Date   | iLEVEL Client Current Date   | Date       | Yes     | Yes     | Yes        | Yes       |
+| Fund Latest Transaction Date | Fund Latest Transaction Date | Date       | Yes     | Yes     | Yes        | Yes       |
 
 ## Company Attributes (Default)
-| Metric                       | Mnemonic                     |
-| ---------------------------- | ---------------------------- |
-| Asset Status                 | Asset Status                 |
-| Business Description (Short) | Business Description (Short) |
-| Website                      | Website                      |
-| Parent Company               | Parent Company               |
-| Headquarters                 | Headquarters                 |
-| Lead Fund                    | Lead Fund                    |
-| Is Child Asset?              | Is Child Asset?              |
-| Lead Investment Professional | Lead Investment Professional |
-| Public/Private               | Public/Private               |
-| Total Committed Capital      | Total Committed Capital      |
-| Reporting Currency           | Reporting Currency           |
-| Investment Amount            | Investment Amount            |
-| Ownership %                  | Ownership %                  |
-| Ownership                    | Ownership                    |
+| Data Item                    | iLEVEL Excel                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ---------------------------- | ---------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Asset Status                 | Asset Status                 | List       | Yes     | Yes     | Yes        | Yes       |
+| Business Description (Short) | Business Description (Short) | Text       | Yes     | Yes     | Yes        | Yes       |
+| Website                      | Website                      | Text       | Yes     | Yes     | Yes        | Yes       |
+| Parent Company               | Parent Company               | Text       | Yes     | Yes     | Yes        | Yes       |
+| Headquarters                 | Headquarters                 | Text       | Yes     | Yes     | Yes        | Yes       |
+| Lead Fund                    | Lead Fund                    | Text       | Yes     | Yes     | Yes        | Yes       |
+| Is Child Asset?              | Is Child Asset?              | Yes/No     | Yes     | Yes     | Yes        | Yes       |
+| Lead Investment Professional | Lead Investment Professional | List       | Yes     | Yes     | Yes        | Yes       |
+| Public/Private               | Public/Private               | Yes/No     | Yes     | Yes     | Yes        | Yes       |
+| Total Committed Capital      | Total Committed Capital      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Reporting Currency           | Reporting Currency           | Text       | Yes     | Yes     | Yes        | Yes       |
+| Investment Amount            | Investment Amount            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Ownership %                  | Ownership %                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Ownership                    | Ownership                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Corporate Action
-| Metric                   | Mnemonic                 |
-| ------------------------ | ------------------------ |
-| Acquired Company Name    | Acquired Company Name    |
-| Acquiring Company Name   | Acquiring Company Name   |
-| Corporate Action         | Corporate Action         |
-| Corporate Action Article | Corporate Action Article |
-| Corporate Action Notes   | Corporate Action Notes   |
-| Prior Asset Name         | Prior Asset Name         |
+| Data Item                | iLEVEL Excel             | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------ | ------------------------ | ---------- | ------- | ------- | ---------- | --------- |
+| Acquired Company Name    | Acquired Company Name    | Text       | Yes     | No      | No         | No        |
+| Acquiring Company Name   | Acquiring Company Name   | Text       | Yes     | No      | No         | No        |
+| Corporate Action         | Corporate Action         | List       | Yes     | No      | No         | No        |
+| Corporate Action Article | Corporate Action Article | Text       | Yes     | No      | No         | No        |
+| Corporate Action Notes   | Corporate Action Notes   | Text       | Yes     | No      | No         | No        |
+| Prior Asset Name         | Prior Asset Name         | Text       | Yes     | No      | No         | No        |
 
 ## Credit Template
-| Metric                                                                                       | Mnemonic                                                                                     |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| % FD equity in warrants? - CR                                                                | % FD equity in warrants? - CR                                                                |
-| ACQ LTM Adjusted EBITDA - CR                                                                 | ACQ LTM Adjusted EBITDA - CR                                                                 |
-| ACQ LTM GAAP EBITDA - CR                                                                     | ACQ LTM GAAP EBITDA - CR                                                                     |
-| All In Rate at Floor (bps) - CR                                                              | All In Rate at Floor (bps) - CR                                                              |
-| Call Protection - CR                                                                         | Call Protection - CR                                                                         |
-| Closing LTV (%) - CR                                                                         | Closing LTV (%) - CR                                                                         |
-| Coupon Rate (bps) (excluding floor) - CR                                                     | Coupon Rate (bps) (excluding floor) - CR                                                     |
-| Credit Rating: Moody's / S&P / Fitch - CR                                                    | Credit Rating: Moody's / S&P / Fitch - CR                                                    |
-| Currency Hedging - CR                                                                        | Currency Hedging - CR                                                                        |
-| Current LTM Adjusted EBITDA - CR                                                             | Current LTM Adjusted EBITDA - CR                                                             |
-| Current LTM GAAP EBITDA - CR                                                                 | Current LTM GAAP EBITDA - CR                                                                 |
-| Excess cash flow sweep - CR                                                                  | Excess cash flow sweep - CR                                                                  |
-| Exit Method - CR                                                                             | Exit Method - CR                                                                             |
-| Fixed or Floating - CR                                                                       | Fixed or Floating - CR                                                                       |
-| Floor (bps) - CR                                                                             | Floor (bps) - CR                                                                             |
-| General Partner Name - CR                                                                    | General Partner Name - CR                                                                    |
-| Current Gross Senior Leverage - CR                                                           | Current Gross Senior Leverage - CR                                                           |
-| Gross TVPI - CR                                                                              | Gross TVPI - CR                                                                              |
-| If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR | If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR |
-| If floating, define reference rate - CR                                                      | If floating, define reference rate - CR                                                      |
-| In compliance w/ all covenants? (Y/N) - CR                                                   | In compliance w/ all covenants? (Y/N) - CR                                                   |
-| Investment Team - CR                                                                         | Investment Team - CR                                                                         |
-| Lien - CR                                                                                    | Lien - CR                                                                                    |
-| Current LTV (%) - CR                                                                         | Current LTV (%) - CR                                                                         |
-| Current Net Leverage - CR                                                                    | Current Net Leverage - CR                                                                    |
-| Number of financial covenants - CR                                                           | Number of financial covenants - CR                                                           |
-| Participation Type - CR                                                                      | Participation Type - CR                                                                      |
-| PE Sponsor - CR                                                                              | PE Sponsor - CR                                                                              |
-| PIK Coupon (bps) (excluding floor) - CR                                                      | PIK Coupon (bps) (excluding floor) - CR                                                      |
-| Senior Gross Leverage - CR                                                                   | Senior Gross Leverage - CR                                                                   |
-| Total Equity Co-Investment Commitment Amount - CR                                            | Total Equity Co-Investment Commitment Amount - CR                                            |
-| Current Total Gross Leverage - CR                                                            | Current Total Gross Leverage - CR                                                            |
-| Total Gross MoM - CR                                                                         | Total Gross MoM - CR                                                                         |
-| Total Loan Term (months) - CR                                                                | Total Loan Term (months) - CR                                                                |
-| Tranche - CR                                                                                 | Tranche - CR                                                                                 |
-| Undrawn fee (bps) - CR                                                                       | Undrawn fee (bps) - CR                                                                       |
-| Upfront fee / OID (bps) - CR                                                                 | Upfront fee / OID (bps) - CR                                                                 |
-| Exit Gross Senior Leverage - CR                                                              | Exit Gross Senior Leverage - CR                                                              |
-| Exit LTM Adjusted EBITDA - CR                                                                | Exit LTM Adjusted EBITDA - CR                                                                |
-| Exit LTM GAAP EBITDA - CR                                                                    | Exit LTM GAAP EBITDA - CR                                                                    |
-| Exit LTV (%) - CR                                                                            | Exit LTV (%) - CR                                                                            |
-| Exit Net Leverage - CR                                                                       | Exit Net Leverage - CR                                                                       |
-| Exit Total Gross Leverage - CR                                                               | Exit Total Gross Leverage - CR                                                               |
-| Net Leverage - CR                                                                            | Net Leverage - CR                                                                            |
-| Total Gross Leverage - CR                                                                    | Total Gross Leverage - CR                                                                    |
-| Fiscal Year - CR                                                                             | Fiscal Year - CR                                                                             |
-| Total Gross IRR                                                                              | Total Gross IRR                                                                              |
+| Data Item                                                                                    | iLEVEL Excel                                                                                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| % FD equity in warrants? - CR                                                                | % FD equity in warrants? - CR                                                                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| ACQ LTM Adjusted EBITDA - CR                                                                 | ACQ LTM Adjusted EBITDA - CR                                                                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| ACQ LTM GAAP EBITDA - CR                                                                     | ACQ LTM GAAP EBITDA - CR                                                                     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| All In Rate at Floor (bps)                                                                   | All In Rate at Floor (bps) - CR                                                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Call Protection - CR                                                                         | Call Protection - CR                                                                         | Text       | Yes     | No      | No         | No        |
+| Closing LTV (%) - CR                                                                         | Closing LTV (%) - CR                                                                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Coupon Rate (bps) (excluding floor) - CR                                                     | Coupon Rate (bps) (excluding floor) - CR                                                     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Credit Rating: Moody's / S&P / Fitch - CR                                                    | Credit Rating: Moody's / S&P / Fitch - CR                                                    | List       | Yes     | Yes     | Yes        | Yes       |
+| Currency Hedging - CR                                                                        | Currency Hedging - CR                                                                        | List       | Yes     | Yes     | Yes        | Yes       |
+| Current LTM Adjusted EBITDA - CR                                                             | Current LTM Adjusted EBITDA - CR                                                             | Numeric    | Yes     | No      | No         | No        |
+| Current LTM GAAP EBITDA - CR                                                                 | Current LTM GAAP EBITDA - CR                                                                 | Numeric    | Yes     | No      | No         | No        |
+| Excess cash flow sweep - CR                                                                  | Excess cash flow sweep - CR                                                                  | Text       | Yes     | No      | No         | No        |
+| Exit Method - CR                                                                             | Exit Method - CR                                                                             | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fixed or Floating - CR                                                                       | Fixed or Floating - CR                                                                       | List       | Yes     | Yes     | Yes        | Yes       |
+| Floor (bps) - CR                                                                             | Floor (bps) - CR                                                                             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| General Partner Name - CR                                                                    | General Partner Name - CR                                                                    | Text       | Yes     | Yes     | Yes        | Yes       |
+| Current Gross Senior Leverage - CR                                                           | Current Gross Senior Leverage - CR                                                           | Numeric    | Yes     | No      | No         | No        |
+| Gross TVPI - CR                                                                              | Gross TVPI - CR                                                                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR | If exited, value of warrants / equity co-investment upon exit (Millions, Fund Currency) - CR | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| If floating, define reference rate - CR                                                      | If floating, define reference rate - CR                                                      | List       | Yes     | Yes     | Yes        | Yes       |
+| In compliance w/ all covenants? (Y/N) - CR                                                   | In compliance w/ all covenants? (Y/N) - CR                                                   | List       | Yes     | Yes     | Yes        | Yes       |
+| Investment Team - CR                                                                         | Investment Team - CR                                                                         | Text       | Yes     | Yes     | Yes        | Yes       |
+| Lien - CR                                                                                    | Lien - CR                                                                                    | List       | Yes     | Yes     | Yes        | Yes       |
+| Current LTV (%) - CR                                                                         | Current LTV (%) - CR                                                                         | Numeric    | Yes     | No      | No         | No        |
+| Current Net Leverage - CR                                                                    | Current Net Leverage - CR                                                                    | Numeric    | Yes     | No      | No         | No        |
+| Number of financial covenants - CR                                                           | Number of financial covenants - CR                                                           | List       | Yes     | Yes     | Yes        | Yes       |
+| Participation Type - CR                                                                      | Participation Type - CR                                                                      | List       | Yes     | Yes     | Yes        | Yes       |
+| PE Sponsor - CR                                                                              | PE Sponsor - CR                                                                              | Text       | Yes     | Yes     | Yes        | Yes       |
+| PIK Coupon (bps) (excluding floor) - CR                                                      | PIK Coupon (bps) (excluding floor) - CR                                                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Senior Gross Leverage - CR                                                                   | Senior Gross Leverage - CR                                                                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Equity Co-Investment Commitment Amount - CR                                            | Total Equity Co-Investment Commitment Amount - CR                                            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Current Total Gross Leverage - CR                                                            | Current Total Gross Leverage - CR                                                            | Numeric    | Yes     | No      | No         | No        |
+| Total Gross MoM - CR                                                                         | Total Gross MoM - CR                                                                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Loan Term (months) - CR                                                                | Total Loan Term (months) - CR                                                                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Tranche - CR                                                                                 | Tranche - CR                                                                                 | Text       | Yes     | Yes     | Yes        | Yes       |
+| Undrawn fee (bps) - CR                                                                       | Undrawn fee (bps) - CR                                                                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Upfront fee / OID (bps) - CR                                                                 | Upfront fee / OID (bps) - CR                                                                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Exit Gross Senior Leverage - CR                                                              | Exit Gross Senior Leverage - CR                                                              | Numeric    | Yes     | No      | No         | No        |
+| Exit LTM Adjusted EBITDA - CR                                                                | Exit LTM Adjusted EBITDA - CR                                                                | Numeric    | Yes     | No      | No         | No        |
+| Exit LTM GAAP EBITDA - CR                                                                    | Exit LTM GAAP EBITDA - CR                                                                    | Numeric    | Yes     | No      | No         | No        |
+| Exit LTV (%) - CR                                                                            | Exit LTV (%) - CR                                                                            | Numeric    | Yes     | No      | No         | No        |
+| Exit Net Leverage - CR                                                                       | Exit Net Leverage - CR                                                                       | Numeric    | Yes     | No      | No         | No        |
+| Exit Total Gross Leverage - CR                                                               | Exit Total Gross Leverage - CR                                                               | Numeric    | Yes     | No      | No         | No        |
+| Net Leverage - CR                                                                            | Net Leverage - CR                                                                            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Gross Leverage - CR                                                                    | Total Gross Leverage - CR                                                                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Fiscal Year - CR                                                                             | Fiscal Year - CR                                                                             | Text       | Yes     | No      | No         | No        |
+| Total Gross IRR                                                                              | Total Gross IRR                                                                              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+
+## Databridge Attributes
+| Data Item                                    | iLEVEL Excel                                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------------------------------- | -------------------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| GP Carry - Databridge                        | GP Carry - Databridge                        | Numeric    | Yes     | No      | No         | No        |
+| Hurdle Rate - Databridge                     | Hurdle Rate - Databridge                     | Numeric    | Yes     | No      | No         | No        |
+| Fund Description - Databridge                | Fund Description - Databridge                | Text       | Yes     | No      | No         | No        |
+| Preparer Email - Databridge                  | Preparer Email - Databridge                  | Text       | Yes     | No      | No         | No        |
+| Total Commitments - Databridge               | Total Commitments - Databridge               | Numeric    | Yes     | No      | No         | No        |
+| Total Drawdowns - Databridge                 | Total Drawdowns - Databridge                 | Numeric    | Yes     | No      | No         | No        |
+| Remaining Commitments - Databridge           | Remaining Commitments - Databridge           | Numeric    | Yes     | No      | No         | No        |
+| Total Number of Investments - Databridge     | Total Number of Investments - Databridge     | Numeric    | Yes     | No      | No         | No        |
+| Remaining Number of Investments - Databridge | Remaining Number of Investments - Databridge | Numeric    | Yes     | No      | No         | No        |
+| Vintage Year - Databridge                    | Vintage Year - Databridge                    | Numeric    | Yes     | No      | No         | No        |
+| Close Date - Databridge                      | Close Date - Databridge                      | Date       | Yes     | No      | No         | No        |
+| Amount Invested - Databridge                 | Amount Invested - Databridge                 | Numeric    | Yes     | No      | No         | No        |
+| Remaining Cost - Databridge                  | Remaining Cost - Databridge                  | Numeric    | Yes     | No      | No         | No        |
+| Realized Value - Databridge                  | Realized Value - Databridge                  | Numeric    | Yes     | No      | No         | No        |
+| Total Value - Databridge                     | Total Value - Databridge                     | Numeric    | Yes     | No      | No         | No        |
+| RVPI - Databridge                            | RVPI - Databridge                            | Numeric    | Yes     | No      | No         | No        |
+| DPI - Databridge                             | DPI - Databridge                             | Numeric    | Yes     | No      | No         | No        |
+| TVPI - Databridge                            | TVPI - Databridge                            | Numeric    | Yes     | No      | No         | No        |
+| Company Reporting Currency - Databridge      | Company Reporting Currency - Databridge      | Text       | Yes     | No      | No         | No        |
+| Investment Status - Databridge               | Investment Status - Databridge               | Text       | Yes     | No      | No         | No        |
+| Country - Databridge                         | Country - Databridge                         | Text       | Yes     | No      | No         | No        |
+| ACQ Equity Value - Databridge                | ACQ Equity Value - Databridge                | Numeric    | Yes     | No      | No         | No        |
+| ACQ Own % - Databridge                       | ACQ Own % - Databridge                       | Numeric    | Yes     | No      | No         | No        |
+| Current Equity Value - Databridge            | Current Equity Value - Databridge            | Numeric    | Yes     | No      | No         | No        |
+| Current Own % - Databridge                   | Current Own % - Databridge                   | Numeric    | Yes     | No      | No         | No        |
+| Exit Equity Value - Databridge               | Exit Equity Value - Databridge               | Numeric    | Yes     | No      | No         | No        |
+| Exit Own % - Databridge                      | Exit Own % - Databridge                      | Numeric    | Yes     | No      | No         | No        |
+| Current LTM Revenue - Databridge             | Current LTM Revenue - Databridge             | Numeric    | Yes     | No      | No         | No        |
+| Current LTM EBITDA - Databridge              | Current LTM EBITDA - Databridge              | Numeric    | Yes     | No      | No         | No        |
+| Current Net Debt - Databridge                | Current Net Debt - Databridge                | Numeric    | Yes     | No      | No         | No        |
+| Current Number of Employees - Databridge     | Current Number of Employees - Databridge     | Numeric    | Yes     | No      | No         | No        |
+| Gross IRR - Asset - Databridge               | Gross IRR - Asset - Databridge               | Numeric    | Yes     | No      | No         | No        |
+| Current Net Debt / EBITDA - Databridge       | Current Net Debt / EBITDA - Databridge       | Numeric    | Yes     | No      | No         | No        |
+| Preparer Name - Databridge                   | Preparer Name - Databridge                   | Text       | Yes     | No      | No         | No        |
+| Net TVPI - Databridge                        | Net TVPI - Databridge                        | Numeric    | Yes     | No      | No         | No        |
+| GP Portfolio Company Name - Databridge       | GP Portfolio Company Name - Databridge       | Text       | Yes     | No      | No         | No        |
+| Unrealized Value - Databridge                | Unrealized Value - Databridge                | Numeric    | Yes     | No      | No         | No        |
+| Exit Date - Databridge                       | Exit Date - Databridge                       | Date       | Yes     | No      | No         | No        |
 
 ## Databridge Tracking
-| Metric                                | Mnemonic                              |
-| ------------------------------------- | ------------------------------------- |
-| Databridge Reach Out Date             | Databridge Reach Out Date             |
-| Databridge Status                     | Databridge Status                     |
-| Databridge Entry Date                 | Databridge Entry Date                 |
-| Databridge Date Received              | Databridge Date Received              |
-| Template Type                         | Template Type                         |
-| Databridge Email Address - GP Tracker | Databridge Email Address - GP Tracker |
-| Databridge Tracking - Notes           | Databridge Tracking - Notes           |
+| Data Item                             | iLEVEL Excel                          | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------------------- | ------------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Databridge Reach Out Date             | Databridge Reach Out Date             | Date       | Yes     | No      | No         | No        |
+| Databridge Status                     | Databridge Status                     | List       | Yes     | No      | No         | No        |
+| Databridge Entry Date                 | Databridge Entry Date                 | Date       | Yes     | No      | No         | No        |
+| Databridge Date Received              | Databridge Date Received              | Date       | Yes     | No      | No         | No        |
+| Template Type                         | Template Type                         | List       | Yes     | No      | No         | No        |
+| Databridge Email Address - GP Tracker | Databridge Email Address - GP Tracker | Text       | Yes     | No      | No         | No        |
+| Databridge Tracking - Notes           | Databridge Tracking - Notes           | Text       | Yes     | No      | No         | No        |
 
 ## Debt & Securities (Default)
-| Metric              | Mnemonic            |
-| ------------------- | ------------------- |
-| Security Name       | Security Name       |
-| Security Type       | Security Type       |
-| Is Ownership        | Is Ownership        |
-| Security Status     | Security Status     |
-| Security Sub-Type   | Security Sub-Type   |
-| Security Short Name | Security Short Name |
+| Data Item           | iLEVEL Excel        | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------- | ------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Security Name       | Security Name       | Text       | Yes     | Yes     | Yes        | Yes       |
+| Security Type       | Security Type       | List       | Yes     | Yes     | Yes        | Yes       |
+| Is Ownership        | Is Ownership        | Yes/No     | Yes     | Yes     | Yes        | Yes       |
+| Security Status     | Security Status     | List       | Yes     | Yes     | Yes        | Yes       |
+| Security Sub-Type   | Security Sub-Type   | List       | Yes     | Yes     | Yes        | Yes       |
+| Security Short Name | Security Short Name | Text       | Yes     | Yes     | Yes        | Yes       |
 
 ## Directs / Co-Invest
-| Metric                           | Mnemonic                         |
-| -------------------------------- | -------------------------------- |
-| Asset Type                       | Asset Type                       |
-| EBITDA                           | EBITDA                           |
-| Investment Date                  | Investment Date                  |
-| Board Seat                       | Board Seat                       |
-| Management Rights                | Management Rights                |
-| Valuation Rationale              | Valuation Rationale              |
-| City                             | City                             |
-| Net Debt                         | Net Debt                         |
-| Total Equity Value               | Total Equity Value               |
-| TEV Multiple                     | TEV Multiple                     |
-| Total Enterprise Value           | Total Enterprise Value           |
-| Total Revenue vs Previous Period | Total Revenue vs Previous Period |
-| EBITDA vs Previous Period        | EBITDA vs Previous Period        |
-| EBITDA Margin                    | EBITDA Margin                    |
-| Cash and Equivalents             | Cash and Equivalents             |
-| Total Debt                       | Total Debt                       |
-| Leverage Ratio                   | Leverage Ratio                   |
-| Cost                             | Cost                             |
-| Total Leverage Multiple          | Total Leverage Multiple          |
-| Reported Valuation Multiple      | Reported Valuation Multiple      |
-| Exit Multiple                    | Exit Multiple                    |
-| Occupancy %                      | Occupancy %                      |
-| Variable Operating Expense       | Variable Operating Expense       |
-| Fixed Operating Expense          | Fixed Operating Expense          |
-| Total Operating Expense          | Total Operating Expense          |
-| Net Operating Income             | Net Operating Income             |
-| Market Cap Rate                  | Market Cap Rate                  |
-| Loan to Value                    | Loan to Value                    |
-| Debt Service Coverage Ratio      | DSCR                             |
-| Leverage Cash Flow               | Leverage Cash Flow               |
-| KPI 1 Name                       | KPI 1 Name                       |
-| KPI 2 Name                       | KPI 2 Name                       |
-| KPI 3 Name                       | KPI 3 Name                       |
-| KPI 1 Value                      | KPI 1 Value                      |
-| KPI 2 Value                      | KPI 2 Value                      |
-| KPI 3 Value                      | KPI 3 Value                      |
-| Metropolitan Statistical Area    | Metropolitan Statistical Area    |
-| Property Life Cycle              | Property Life Cycle              |
-| Property Type                    | Property Type                    |
-| Anti-bribery Program             | Anti-bribery Program             |
-| Code of Conduct                  | Code of Conduct                  |
-| Community                        | Community                        |
-| Customer Survey Mechanism        | Customer Survey Mechanism        |
-| Ethics and Compliance Policy     | Ethics and Compliance Policy     |
-| Health & Safety                  | Health & Safety                  |
-| Labor Rights                     | Labor Rights                     |
-| Country (Directs)                | Country (Directs)                |
-| State (Directs)                  | State (Directs)                  |
+| Data Item                        | iLEVEL Excel                     | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------------------- | -------------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Asset Type                       | Asset Type                       | List       | Yes     | Yes     | Yes        | Yes       |
+| EBITDA                           | EBITDA                           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Investment Date                  | Investment Date                  | Date       | Yes     | Yes     | Yes        | Yes       |
+| Board Seat                       | Board Seat                       | List       | Yes     | Yes     | Yes        | Yes       |
+| Management Rights                | Management Rights                | List       | Yes     | Yes     | Yes        | Yes       |
+| Valuation Rationale              | Valuation Rationale              | Text       | Yes     | Yes     | Yes        | Yes       |
+| City                             | City                             | Text       | Yes     | Yes     | Yes        | Yes       |
+| Net Debt                         | Net Debt                         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Equity Value               | Total Equity Value               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| TEV Multiple                     | TEV Multiple                     | Text       | Yes     | Yes     | Yes        | Yes       |
+| Total Enterprise Value           | Total Enterprise Value           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Revenue vs Previous Period | Total Revenue vs Previous Period | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| EBITDA vs Previous Period        | EBITDA vs Previous Period        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| EBITDA Margin                    | EBITDA Margin                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cash and Equivalents             | Cash and Equivalents             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Debt                       | Total Debt                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Leverage Ratio                   | Leverage Ratio                   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cost                             | Cost                             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Leverage Multiple          | Total Leverage Multiple          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Reported Valuation Multiple      | Reported Valuation Multiple      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Exit Multiple                    | Exit Multiple                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Fund Attributes (Default)
-| Metric                        | Mnemonic                      |
-| ----------------------------- | ----------------------------- |
-| Fund Name (Short)             | Fund Name (Short)             |
-| Fund Status                   | Fund Status                   |
-| Capital Called To Date        | Capital Called To Date        |
-| Initial Close Date            | Initial Close Date            |
-| Final Close Date              | Final Close Date              |
-| Fund Industry                 | Fund Industry                 |
-| Fund Type                     | Fund Type                     |
-| Type of Plan                  | Type of Plan                  |
-| Entity Type                   | Entity Type                   |
-| Default PME Index             | Default PME Index             |
-| Default PME Liquidity Premium | Default PME Liquidity Premium |
-| Entity ID                     | Entity ID                     |
+| Data Item           | iLEVEL Excel        | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------- | ------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Fund Name           | Fund Name           | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fund Manager        | Fund Manager        | Text       | Yes     | Yes     | Yes        | Yes       |
+| Vintage Year        | Vintage Year        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Strategy            | Strategy            | List       | Yes     | Yes     | Yes        | Yes       |
+| Fund Size           | Fund Size           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Commitment Currency | Commitment Currency | Text       | Yes     | Yes     | Yes        | Yes       |
+| Geographic Focus    | Geographic Focus    | Text       | Yes     | Yes     | Yes        | Yes       |
+| Sector Focus        | Sector Focus        | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fund Status         | Fund Status         | List       | Yes     | Yes     | Yes        | Yes       |
+| First Close Date    | First Close Date    | Date       | Yes     | Yes     | Yes        | Yes       |
+| Final Close Date    | Final Close Date    | Date       | Yes     | Yes     | Yes        | Yes       |
+| Fund Term (Years)   | Fund Term (Years)   | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Fund Setup
-| Metric                  | Mnemonic                |
-| ----------------------- | ----------------------- |
-| Fund Reporting Currency | Fund Reporting Currency |
-| Fund Name (Long)        | Fund Name (Long)        |
-| Fund Description        | Fund Description        |
-| Fund Vintage            | Fund Vintage            |
-| Fund General Partner    | Fund General Partner    |
-| Fund Size               | Fund Size               |
-| Fund Geography          | Fund Geography          |
-| Strategy                | Strategy                |
-| SubStrategy             | SubStrategy             |
-| Investment Status       | Investment Status       |
-| IsExternal              | IsExternal              |
-| IsExclude               | IsExclude               |
-| Commitment - Local      | Commitment              |
-| Acquisition Year        | Acquisition Year        |
-| General Partner         | General Partner         |
-| Fund Data Type          | Fund Data Type          |
+| Data Item           | iLEVEL Excel        | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------- | ------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Fund Legal Name     | Fund Legal Name     | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fund Domicile       | Fund Domicile       | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fund Structure      | Fund Structure      | List       | Yes     | Yes     | Yes        | Yes       |
+| General Partner     | General Partner     | Text       | Yes     | Yes     | Yes        | Yes       |
+| Limited Partner     | Limited Partner     | Text       | Yes     | Yes     | Yes        | Yes       |
+| Administrator       | Administrator       | Text       | Yes     | Yes     | Yes        | Yes       |
+| Auditor             | Auditor             | Text       | Yes     | Yes     | Yes        | Yes       |
+| Custodian           | Custodian           | Text       | Yes     | Yes     | Yes        | Yes       |
+| Fund Inception Date | Fund Inception Date | Date       | Yes     | Yes     | Yes        | Yes       |
+| Reporting Frequency | Reporting Frequency | List       | Yes     | Yes     | Yes        | Yes       |
 
 ## GICS
-| Metric                      | Mnemonic                    |
-| --------------------------- | --------------------------- |
-| Industry Group              | Industry Group              |
-| Business Description (Long) | Business Description (Long) |
-| Geography                   | Geography                   |
-| Ticker Symbol               | Ticker Symbol               |
-| Sector                      | Sector                      |
-| Country                     | Country                     |
-| State                       | State                       |
-| Postal Code                 | Postal Code                 |
-| Sub-Industry                | Sub-Industry                |
-| Stock Exchange              | Stock Exchange              |
-| Status                      | Status                      |
-| Industry                    | Industry                    |
+| Data Item           | iLEVEL Excel        | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------- | ------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| GICS Sector         | GICS Sector         | Text       | Yes     | Yes     | Yes        | Yes       |
+| GICS Industry Group | GICS Industry Group | Text       | Yes     | Yes     | Yes        | Yes       |
+| GICS Industry       | GICS Industry       | Text       | Yes     | Yes     | Yes        | Yes       |
+| GICS Sub-Industry   | GICS Sub-Industry   | Text       | Yes     | Yes     | Yes        | Yes       |
 
 ## Holdings
-| Metric                                  | Mnemonic                                |
-| --------------------------------------- | --------------------------------------- |
-| Holdings Entry Status                   | Holdings Entry Status                   |
-| Fund Holdings Notes                     | Fund Holdings Notes                     |
-| Annual Fund Holdings Notes              | Annual Fund Holdings Notes              |
-| Duped Holdings Quarter End Date         | Duped Holdings Quarter End Date         |
-| Holdings Entry QC Date - Portal         | Holdings Entry QC Date - Portal         |
-| Holdings Entry Submission Date - Portal | Holdings Entry Submission Date - Portal |
-| Holdings Received Date - Portal         | Holdings Received Date - Portal         |
-| Holdings Reporting Frequency            | Holdings Reporting Frequency            |
-| Holdings Entry ID                       | Holdings Entry ID                       |
+| Data Item            | iLEVEL Excel         | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------- | -------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Holding Name         | Holding Name         | Text       | Yes     | Yes     | Yes        | Yes       |
+| Holding Type         | Holding Type         | List       | Yes     | Yes     | Yes        | Yes       |
+| Investment Date      | Investment Date      | Date       | Yes     | Yes     | Yes        | Yes       |
+| Exit Date            | Exit Date            | Date       | Yes     | Yes     | Yes        | Yes       |
+| Holding Status       | Holding Status       | List       | Yes     | Yes     | Yes        | Yes       |
+| Investment Amount    | Investment Amount    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Current Value        | Current Value        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Ownership Percentage | Ownership Percentage | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Realized Value       | Realized Value       | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Market Values
-| Metric                                          | Mnemonic                                        |
-| ----------------------------------------------- | ----------------------------------------------- |
-| NAV                                             | NAV                                             |
-| Reported Market Value - Date                    | Reported Market Value - Date                    |
-| Adjusted Market Value                           | Adjusted Market Value                           |
-| Reported Market Value - CF                      | Reported Market Value - CF                      |
-| Latest Reported Market Value - CF Date (System) | Latest Reported Market Value - CF Date (System) |
-| Market Capitalization                           | Market Capitalization                           |
-| TEV/Total Revenue                               | TEV/Total Revenue                               |
-| TEV/EBITDA                                      | TEV/EBITDA                                      |
-| Total Revenues, 1 Year Growth                   | Total Revenues, 1 Year Growth                   |
-| EBITDA, 1 Year Growth                           | EBITDA, 1 Year Growth                           |
+| Data Item            | iLEVEL Excel         | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------- | -------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Market Value         | Market Value         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Fair Value           | Fair Value           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cost Basis           | Cost Basis           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Unrealized Gain/Loss | Unrealized Gain/Loss | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Realized Gain/Loss   | Realized Gain/Loss   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Valuation Date       | Valuation Date       | Date       | Yes     | Yes     | Yes        | Yes       |
 
 ## PC Entry
-| Metric                            | Mnemonic                          |
-| --------------------------------- | --------------------------------- |
-| PC Entry ID                       | PC Entry ID                       |
-| PC Entry QC Date – Portal         | PC Entry QC Date – Portal         |
-| PC Entry Status                   | PC Entry Status                   |
-| PC Entry Submission Date - Portal | PC Entry Submission Date - Portal |
-| PC Received Date - Portal         | PC Received Date - Portal         |
-| PC Reporting Frequency            | PC Reporting Frequency            |
+| Data Item              | iLEVEL Excel           | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ---------------------- | ---------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Portfolio Company Name | Portfolio Company Name | Text       | Yes     | Yes     | Yes        | Yes       |
+| Investment Date        | Investment Date        | Date       | Yes     | Yes     | Yes        | Yes       |
+| Exit Date              | Exit Date              | Date       | Yes     | Yes     | Yes        | Yes       |
+| Entry Enterprise Value | Entry Enterprise Value | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Entry Equity Value     | Entry Equity Value     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Entry EBITDA           | Entry EBITDA           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Entry Revenue          | Entry Revenue          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Entry Multiple         | Entry Multiple         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Entry Ownership        | Entry Ownership        | Numeric    | Yes     | Yes     | Yes        | Yes       |
+
+## Real Estate Template
+| Data Item            | iLEVEL Excel         | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------- | -------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Property Name        | Property Name        | Text       | Yes     | Yes     | Yes        | Yes       |
+| Property Type        | Property Type        | List       | Yes     | Yes     | Yes        | Yes       |
+| Acquisition Date     | Acquisition Date     | Date       | Yes     | Yes     | Yes        | Yes       |
+| Property Location    | Property Location    | Text       | Yes     | Yes     | Yes        | Yes       |
+| Purchase Price       | Purchase Price       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Current Valuation    | Current Valuation    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Net Operating Income | Net Operating Income | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Capitalization Rate  | Capitalization Rate  | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Occupancy Rate       | Occupancy Rate       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+
 
 ## SOI Entry
-| Metric                        | Mnemonic                      |
-| ----------------------------- | ----------------------------- |
-| Company Name                  | Company Name                  |
-| Acquisition Date              | Acquisition Date              |
-| Exit Date                     | Exit Date                     |
-| Remaining Market Value        | Remaining Market Value        |
-| Total Proceeds                | Total Proceeds                |
-| Total Value                   | Total Value                   |
-| Total Cost Basis              | Total Cost Basis              |
-| Remaining Cost Basis          | Remaining Cost Basis          |
-| Total Cost Change             | Total Cost Change             |
-| Remaining Market Value Change | Remaining Market Value Change |
-| TVM Change                    | TVM Change                    |
-| Total Proceeds Change         | Total Proceeds Change         |
-| Company Status                | Company Status                |
+| Data Item           | iLEVEL Excel        | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------- | ------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Statement Line Item | Statement Line Item | Text       | Yes     | Yes     | Yes        | Yes       |
+| Reporting Period    | Reporting Period    | Date       | Yes     | Yes     | Yes        | Yes       |
+| Amount              | Amount              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Currency            | Currency            | Text       | Yes     | Yes     | Yes        | Yes       |
+| Notes               | Notes               | Text       | Yes     | Yes     | Yes        | Yes       |
 
 ## Client Tracking
-| Metric      | Mnemonic    |
-| ----------- | ----------- |
-| Investor ID | Investor ID |
+| Data Item            | iLEVEL Excel         | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| -------------------- | -------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Client Name          | Client Name          | Text       | Yes     | Yes     | Yes        | Yes       |
+| Client Type          | Client Type          | List       | Yes     | Yes     | Yes        | Yes       |
+| Relationship Manager | Relationship Manager | Text       | Yes     | Yes     | Yes        | Yes       |
+| Client Region        | Client Region        | Text       | Yes     | Yes     | Yes        | Yes       |
+| Client Commitment    | Client Commitment    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Client Vintage       | Client Vintage       | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Company Attributes
-| Metric                           | Mnemonic                         |
-| -------------------------------- | -------------------------------- |
-| T&C_Price Per Share              | T&C_Price Per Share              |
-| T&C_Conversion Ratio             | T&C_Conversion Ratio             |
-| T&C_Shares Held                  | T&C_Shares Held                  |
-| T&C_Amount Invested              | T&C_Amount Invested              |
-| T&C_Conversion Ratio Numerator   | T&C_Conversion Ratio Numerator   |
-| T&C_Conversion Ratio Denominator | T&C_Conversion Ratio Denominator |
-| Investment Thesis                | Investment Thesis                |
+| Data Item                | iLEVEL Excel             | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ------------------------ | ------------------------ | ---------- | ------- | ------- | ---------- | --------- |
+| Company Name             | Company Name             | Text       | Yes     | No      | No         | No        |
+| Legal Structure          | Legal Structure          | List       | Yes     | No      | No         | No        |
+| Industry                 | Industry                 | List       | Yes     | No      | No         | No        |
+| Sector                   | Sector                   | List       | Yes     | No      | No         | No        |
+| Country of Incorporation | Country of Incorporation | Text       | Yes     | No      | No         | No        |
+| Headquarters Location    | Headquarters Location    | Text       | Yes     | No      | No         | No        |
+| Date of Incorporation    | Date of Incorporation    | Date       | Yes     | No      | No         | No        |
+| Ownership Type           | Ownership Type           | Text       | Yes     | No      | No         | No        |
+| Parent Company           | Parent Company           | Text       | Yes     | No      | No         | No        |
+| Reporting Currency       | Reporting Currency       | Text       | Yes     | No      | No         | No        |
+| Board Members            | Board Members            | List       | Yes     | No      | No         | No        |
+| Regulatory Status        | Regulatory Status        | List       | Yes     | No      | No         | No        |
+| Employees                | Employees                | Numeric    | Yes     | No      | No         | No        |
+| ESG Classification       | ESG Classification       | List       | Yes     | No      | No         | No        |
 
 ## Fund Attributes (Additional)
-| Metric                    | Mnemonic                  |
-| ------------------------- | ------------------------- |
-| Is Internal Investor?     | Is Internal Investor?     |
-| Benchmark-Id              | Benchmark-Id              |
-| Benchmark-Vintage         | Benchmark-Vintage         |
-| Expiration Date (Assumed) | Expiration Date (Assumed) |
+| Data Item         | iLEVEL Excel      | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ----------------- | ----------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Fund Name         | Fund Name         | Text       | Yes     | No      | No         | No        |
+| Fund Type         | Fund Type         | List       | Yes     | No      | No         | No        |
+| Fund Strategy     | Fund Strategy     | List       | Yes     | No      | No         | No        |
+| Vintage Year      | Vintage Year      | Numeric    | Yes     | No      | No         | No        |
+| Fund Size         | Fund Size         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Currency          | Currency          | Text       | Yes     | No      | No         | No        |
+| Investment Period | Investment Period | Date Range | Yes     | No      | No         | No        |
+| Fund Manager      | Fund Manager      | Text       | Yes     | No      | No         | No        |
+| Target IRR        | Target IRR        | Numeric    | No      | Yes     | No         | Yes       |
+| Hurdle Rate       | Hurdle Rate       | Numeric    | No      | Yes     | No         | Yes       |
+| Management Fees   | Management Fees   | Numeric    | No      | Yes     | No         | Yes       |
+| Carry Percentage  | Carry Percentage  | Numeric    | No      | Yes     | No         | Yes       |
+| Number of LPs     | Number of LPs     | Numeric    | Yes     | No      | No         | No        |
+| Fund Status       | Fund Status       | List       | Yes     | No      | No         | No        |
 
 ## Balance Sheet
-| Metric                          | Mnemonic                        |
-| ------------------------------- | ------------------------------- |
-| Short-Term Investments          | Short-Term Investments          |
-| Cash and Short-Term Investments | Cash and Short-Term Investments |
-| Accounts Receivable             | Accounts Receivable             |
-| Inventory                       | Inventory                       |
-| Other Current Assets            | Other Current Assets            |
-| Total Current Assets            | Total Current Assets            |
-| Property Plant & Equipment      | Property Plant & Equipment      |
-| Goodwill                        | Goodwill                        |
-| Total Long-Term Assets          | Total Long-Term Assets          |
-| Total Assets                    | Total Assets                    |
-| Accounts Payable                | Accounts Payable                |
-| Other Current Liabilities       | Other Current Liabilities       |
-| Total Current Liabilities       | Total Current Liabilities       |
-| Long Term Debt                  | Long Term Debt                  |
-| Minority Interest               | Minority Interest               |
-| Total Long-Term Liabilities     | Total Long-Term Liabilities     |
-| Total Liabilities               | Total Liabilities               |
-| Shareholder Equity              | Shareholder Equity              |
-| Total Liabilities & Equity      | Total Liabilities & Equity      |
+| Data Item                    | iLEVEL Excel                 | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| ---------------------------- | ---------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Cash and Cash Equivalents    | Cash and Cash Equivalents    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Accounts Receivable          | Accounts Receivable          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Inventory                    | Inventory                    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Current Assets         | Total Current Assets         | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Property Plant & Equipment   | Property Plant & Equipment   | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Intangible Assets            | Intangible Assets            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Assets                 | Total Assets                 | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Accounts Payable             | Accounts Payable             | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Short-Term Debt              | Short-Term Debt              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Current Liabilities    | Total Current Liabilities    | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Long-Term Debt               | Long-Term Debt               | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Liabilities            | Total Liabilities            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Shareholder Equity           | Shareholder Equity           | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Total Liabilities and Equity | Total Liabilities and Equity | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 ## Income Statement
-| Metric                                  | Mnemonic                                |
-| --------------------------------------- | --------------------------------------- |
-| Total Revenue                           | Total Revenue                           |
-| Non-Operating Income                    | Non-Operating Income                    |
-| Expenses                                | Expenses                                |
-| Cost of Goods Sold                      | Cost of Goods Sold                      |
-| SG&A                                    | SG&A                                    |
-| Depreciation & Amortization             | Depreciation & Amortization             |
-| Other Operating Expense/(Income), Total | Other Operating Expense/(Income), Total |
-| Total Interest Expense                  | Total Interest Expense                  |
-| Tax Expense                             | Tax Expense                             |
-| Key Performance Indicators              | Key Performance Indicators              |
-| Widgets Produced                        | Widgets Produced                        |
-| Widgets Rejected                        | Widgets Rejected                        |
-| Rejection Rate                          | Rejection Rate                          |
-| Operating Rate                          | Operating Rate                          |
-| Takt Time (Minutes)                     | Takt Time (Minutes)                     |
-| Recent Developments                     | Recent Developments                     |
-| Financial Highlights                    | Financial Highlights                    |
-| Net Income                              | Net Income                              |
-| Sales                                   | Sales                                   |
-| Cost of Sales                           | Cost of Sales                           |
-| Other Income                            | Other Income                            |
-| Gross Profit                            | Gross Profit                            |
-| Administration Expense                  | Administration Expense                  |
-| Employee Benefits Expense               | Employee Benefits Expense               |
-| Depreciation & Amortisation Expense     | Depreciation & Amortisation Expense     |
-| Rent                                    | Rent                                    |
-| Other Expenses                          | Other Expenses                          |
-| Finance Costs                           | Finance Costs                           |
-| Total Expenses                          | Total Expenses                          |
-| EBIT                                    | EBIT                                    |
-| EPAT                                    | EPAT                                    |
+| Data Item                   | iLEVEL Excel                | Value Type | Actual? | Budget? | Valuation? | Forecast? |
+| --------------------------- | --------------------------- | ---------- | ------- | ------- | ---------- | --------- |
+| Revenue                     | Revenue                     | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Cost of Goods Sold          | Cost of Goods Sold          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Gross Profit                | Gross Profit                | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Operating Expenses          | Operating Expenses          | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| EBITDA                      | EBITDA                      | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Depreciation & Amortization | Depreciation & Amortization | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Operating Income            | Operating Income            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Interest Expense            | Interest Expense            | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Pre-Tax Income              | Pre-Tax Income              | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Taxes                       | Taxes                       | Numeric    | Yes     | Yes     | Yes        | Yes       |
+| Net Income                  | Net Income                  | Numeric    | Yes     | Yes     | Yes        | Yes       |
 
 **When in doubt:** Check the metric reference tables above or the Excel reference guide. If not found, it does NOT exist.
 
